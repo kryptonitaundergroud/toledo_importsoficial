@@ -1,0 +1,911 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0d1412">
+<title>TOLEDO IMPORTS — catálogo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800&family=Archivo:wght@400;500;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0d1412;--pan:#141d19;--pan2:#101814;--ln:rgba(255,255,255,.09);--tx:#e9efe9;--mut:#8fa39a;--org:#ff7a1a;--orgd:#d95f07}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--tx);font-family:Archivo,system-ui,sans-serif;-webkit-font-smoothing:antialiased;padding-bottom:90px}
+button{font-family:inherit;cursor:pointer}
+input,textarea{font-family:'Space Mono',monospace}
+.hz{height:10px;background:repeating-linear-gradient(-45deg,var(--org) 0 14px,var(--bg) 14px 28px)}
+.hz.slim{height:6px}
+header{display:flex;justify-content:space-between;align-items:center;padding:18px 18px 14px}
+.lgl h1{font-family:'Big Shoulders Display',sans-serif;font-weight:800;font-size:44px;line-height:.9;letter-spacing:.02em}
+.lgl h1 span{color:var(--org);margin-left:8px}
+.lgl p{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.28em;color:var(--mut);margin-top:6px}
+.stmp{text-align:right;border:2px solid var(--org);color:var(--org);font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.2em;padding:8px 12px;line-height:1.5;transform:rotate(2deg)}
+.stmp b{font-size:14px}
+.bar{position:sticky;top:0;z-index:40;background:rgba(13,20,18,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--ln);padding:10px 14px;display:flex;flex-direction:column;gap:8px}
+#q{width:100%;background:var(--pan2);border:1px solid var(--ln);color:var(--tx);padding:11px 12px;font-size:13px;letter-spacing:.08em;border-radius:0;-webkit-appearance:none}
+.tabs{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tb{flex:none;background:transparent;border:1px solid var(--ln);color:var(--mut);font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.1em;padding:8px 12px}
+.tb.on{background:var(--tx);color:#101512;border-color:var(--tx);font-weight:700}
+.tb.ttab{color:var(--org);border-color:rgba(255,122,26,.5)}
+.tb.ttab.on{background:var(--org);border-color:var(--org);color:#101512}
+.bsel{display:flex;gap:6px}
+.bb{flex:1;background:transparent;border:1px dashed var(--ln);color:var(--mut);font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.12em;padding:7px 6px}
+.bb.on{border-style:solid;border-color:var(--org);color:var(--org);font-weight:700}
+.sec{padding:20px 14px 4px}
+.sec h2{font-family:'Big Shoulders Display',sans-serif;font-weight:800;font-size:30px;letter-spacing:.04em;display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.sec h2:before{content:'';width:16px;height:16px;background:var(--org)}
+.cnt{font-family:'Space Mono',monospace;font-size:11px;color:var(--mut);border:1px solid var(--ln);padding:2px 8px;transform:translateY(-4px)}
+.grid{display:flex;flex-direction:column;gap:14px}
+.card{background:var(--pan);border:1px solid var(--ln);clip-path:polygon(0 0,calc(100% - 20px) 0,100% 20px,100% 100%,0 100%)}
+.media{position:relative;aspect-ratio:4/5;background:var(--pan2);border-bottom:1px solid var(--ln);overflow:hidden}
+.media img{width:100%;height:100%;object-fit:cover;display:block}
+.media.gstack img{position:absolute;top:0;left:0;opacity:0;transition:opacity .18s;pointer-events:none}
+.media.gstack img.on{opacity:1}
+.media img.cont{object-fit:contain;padding:8px;background:#0a0f0d}
+.mf{position:absolute;inset:0;display:none;align-items:center;justify-content:center;background:repeating-linear-gradient(-45deg,rgba(255,255,255,.025) 0 12px,transparent 12px 24px)}
+.sem-media .mf{display:flex}
+.mf small{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.3em;color:var(--mut);border:1px dashed var(--ln);padding:8px 12px}
+.base{position:absolute;top:10px;right:10px;font-family:'Space Mono',monospace;font-size:10px;font-weight:700;letter-spacing:.18em;color:var(--org);border:1px solid var(--org);padding:3px 8px;background:rgba(13,20,18,.8)}
+.pb{position:absolute;top:10px;left:0;background:var(--org);color:#141414;font-family:'Space Mono',monospace;font-size:9.5px;font-weight:700;letter-spacing:.14em;padding:4px 9px}
+.sku{position:absolute;bottom:8px;left:10px;font-family:'Space Mono',monospace;font-size:9px;letter-spacing:.14em;color:rgba(233,239,233,.42)}
+.body{padding:13px 14px 15px}
+.body h3{font-family:'Big Shoulders Display',sans-serif;font-weight:800;font-size:27px;letter-spacing:.03em;line-height:1}
+.desc{font-family:'Space Mono',monospace;font-size:9.5px;letter-spacing:.14em;color:var(--mut);line-height:1.7;margin-top:7px}
+.tiers{margin-top:11px;border:1px solid var(--ln);background:var(--pan2)}
+.tier{display:flex;justify-content:space-between;align-items:center;padding:9px 12px;border-bottom:1px solid var(--ln);cursor:pointer;font-family:'Space Mono',monospace;font-size:12.5px;color:var(--mut)}
+.tier:last-child{border-bottom:none}
+.tier b{color:var(--tx);font-weight:400}
+.tu{font-style:normal;font-size:.82em;color:var(--org)}
+.pg{font-style:normal;font-size:.74em;color:var(--mut);margin-left:6px;white-space:nowrap}
+.tier:active{background:rgba(255,122,26,.08)}
+.tier.sel{background:rgba(255,122,26,.13);box-shadow:inset 3px 0 0 var(--org);color:#fff}
+.tier.sel b{color:var(--org);font-weight:700}
+.qtyrow{display:flex;align-items:center;gap:10px;margin-top:11px}
+.qlab{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.2em;color:var(--mut)}
+.qty{display:flex;border:1px solid var(--ln)}
+.qm,.qp{width:36px;height:36px;background:transparent;border:none;color:var(--tx);font-size:18px;line-height:1}
+.qm:active,.qp:active{background:rgba(255,122,26,.15);color:var(--org)}
+.qv{width:44px;text-align:center;background:transparent;border:none;border-left:1px solid var(--ln);border-right:1px solid var(--ln);color:#fff;font-size:14px;font-weight:700}
+.acts{display:grid;grid-template-columns:1fr 1.25fr;gap:8px;margin-top:12px}
+.bp,.ba{height:46px;font-weight:800;font-size:12px;letter-spacing:.12em}
+.bp{background:transparent;border:1px solid rgba(255,255,255,.3);color:var(--tx)}
+.bp:active{border-color:var(--tx)}
+.ba{background:var(--org);border:none;color:#141414}
+.ba:active{background:var(--orgd)}
+.eof{text-align:center;font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.3em;color:var(--mut);padding:26px 0 10px}
+.viewoff{display:none}
+main.hide{display:none}
+.th{font-family:'Big Shoulders Display',sans-serif;font-weight:800;font-size:34px;letter-spacing:.04em;padding:22px 16px 0}
+.th:before{content:'▤ ';color:var(--org)}
+.tsub{font-size:12.5px;color:var(--mut);padding:6px 16px 0;line-height:1.5}
+.cpyall{margin:12px 16px 4px;background:var(--org);border:none;color:#141414;font-weight:800;font-size:12px;letter-spacing:.14em;padding:12px;width:calc(100% - 32px)}
+.tblbox{margin:12px 16px 0;border:1px solid var(--ln);background:var(--pan2)}
+.tblhead{display:flex;justify-content:space-between;align-items:center;padding:9px 12px;border-bottom:1px solid var(--ln);font-family:'Space Mono',monospace;font-size:11px;font-weight:700;letter-spacing:.22em;color:var(--org)}
+.cpy{background:transparent;border:1px solid var(--org);color:var(--org);font-family:'Space Mono',monospace;font-size:10px;font-weight:700;letter-spacing:.14em;padding:6px 10px}
+.tblbox pre{padding:13px 14px;font-family:'Space Mono',monospace;font-size:12px;line-height:1.6;color:#d8e0da;white-space:pre;overflow-x:auto}
+footer p{font-family:'Space Mono',monospace;font-size:9.5px;letter-spacing:.24em;color:var(--mut);text-align:center;padding:14px 10px}
+#cartb{position:fixed;right:14px;bottom:16px;z-index:60;width:58px;height:58px;background:var(--org);border:none;font-size:24px;box-shadow:0 10px 26px rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center}
+#cartb:active{filter:brightness(1.15)}
+#cartn{position:absolute;top:-7px;right:-7px;min-width:22px;height:22px;background:#fff;color:#141414;border-radius:999px;font-family:'Space Mono',monospace;font-size:11px;display:flex;align-items:center;justify-content:center;padding:0 4px}
+#cartn.off{display:none}
+#scrim{position:fixed;inset:0;background:rgba(0,0,0,.6);opacity:0;pointer-events:none;transition:.22s;z-index:70}
+#scrim.on{opacity:1;pointer-events:auto}
+#drawer{position:fixed;left:0;right:0;bottom:0;z-index:80;background:var(--pan2);max-height:92vh;display:flex;flex-direction:column;transform:translateY(103%);transition:transform .28s cubic-bezier(.2,.8,.2,1);border-top:2px solid var(--org)}
+#drawer.on{transform:none}
+.dhead{display:flex;justify-content:space-between;align-items:center;padding:12px 16px;border-bottom:1px solid var(--ln);font-family:'Big Shoulders Display',sans-serif;font-size:24px;font-weight:800;letter-spacing:.05em}
+.dhead b span{color:var(--org);font-family:'Space Mono',monospace;font-size:13px}
+#dclos{background:transparent;border:1px solid var(--ln);color:var(--tx);width:34px;height:34px;font-size:14px}
+.dwrap{overflow-y:auto;padding:12px 14px calc(18px + env(safe-area-inset-bottom))}
+.dempty{text-align:center;font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.2em;color:var(--mut);padding:44px 0;line-height:2}
+.dl{display:flex;align-items:center;gap:8px;border-bottom:1px solid var(--ln);padding:10px 0}
+.dli{flex:1;min-width:0}
+.dln{font-weight:700;font-size:12.5px;letter-spacing:.04em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.dls{font-family:'Space Mono',monospace;font-size:10px;color:var(--mut);letter-spacing:.08em;margin-top:3px}
+.dlx{background:transparent;border:none;color:var(--mut);font-size:16px;padding:4px 6px}
+.dlt{font-family:'Space Mono',monospace;font-size:12.5px;min-width:74px;text-align:right}
+.dtot{border-top:2px solid var(--org);margin-top:6px;padding-top:10px;font-family:'Space Mono',monospace;font-size:11.5px;letter-spacing:.06em;line-height:1.9}
+.dtot b{font-size:15px;color:var(--org)}
+.fflag{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.26em;color:var(--org);margin:16px 0 8px;font-weight:700}
+#dform input,#dform textarea{width:100%;background:var(--bg);border:1px solid var(--ln);color:var(--tx);padding:11px 12px;font-size:12.5px;letter-spacing:.05em;margin-bottom:8px;border-radius:0;-webkit-appearance:none}
+#dform input::placeholder,#dform textarea::placeholder{color:rgba(143,163,154,.75)}
+#dform input:focus,#dform textarea:focus{outline:none;border-color:var(--org)}
+.row2{display:flex;gap:8px}
+.row2 input:first-child{flex:1}
+#dform.err input.shake{animation:shk .3s}
+@keyframes shk{25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.dacts{margin-top:12px;display:flex;flex-direction:column;gap:8px}
+.dw{background:var(--org);border:none;color:#141414;height:52px;font-weight:800;font-size:13.5px;letter-spacing:.1em}
+.dt2{background:transparent;border:1px solid var(--ln);color:var(--mut);height:42px;font-weight:700;font-size:11.5px;letter-spacing:.16em}
+#toast{position:fixed;left:50%;bottom:88px;transform:translateX(-50%) translateY(20px);background:#fff;color:#141414;font-family:'Space Mono',monospace;font-size:11px;font-weight:700;letter-spacing:.12em;padding:10px 16px;opacity:0;transition:.22s;z-index:99;pointer-events:none;max-width:86vw;text-align:center}
+#toast.on{opacity:1;transform:translateX(-50%)}
+@media(min-width:640px){
+ .grid{display:grid;grid-template-columns:1fr 1fr}
+ .lgl h1{font-size:56px}
+ #drawer{left:50%;right:auto;width:480px;transform:translate(-50%,103%);border:2px solid var(--org)}
+ #drawer.on{transform:translate(-50%,0)}
+ .tblbox pre{font-size:13px}
+}
+
+.gcnt{position:absolute;bottom:10px;right:10px;z-index:2;font-family:'Space Mono',monospace;font-size:10px;font-weight:700;color:#141414;background:var(--org);padding:4px 8px;border-radius:99px}
+.gdots{position:absolute;left:0;right:0;bottom:10px;z-index:2;display:flex;gap:5px;justify-content:center}
+.gdots i{width:6px;height:6px;border-radius:99px;background:rgba(255,255,255,.35)}
+.gdots i.on{background:var(--org);width:16px}
+.ctb{display:block;width:calc(100% - 24px);margin:0 12px 10px;padding:9px 10px;background:transparent;border:1px dashed var(--ln);border-radius:8px;color:var(--mut);font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.12em;text-align:center}
+.ctb:active{border-color:var(--org);color:var(--org)}
+#lb{position:fixed;inset:0;z-index:95;background:rgba(6,10,8,.96);display:none;flex-direction:column}
+#lb.open{display:flex}
+#lbi{flex:1;width:100%;height:100%;object-fit:contain;display:block;padding:6px}
+.lbbar{display:flex;align-items:center;gap:10px;padding:10px 14px;background:#0a0f0d;border-top:1px solid var(--ln)}
+.lbbar b{flex:1;font-family:'Space Mono',monospace;font-size:10px;font-weight:400;color:var(--mut);letter-spacing:.08em;text-transform:uppercase;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.lbbar button{min-width:46px;height:46px;border-radius:10px;border:1px solid var(--ln);background:var(--pan);color:var(--tx);font-size:18px;line-height:1}
+.lbbar button:active{border-color:var(--org);color:var(--org)}
+.tier .pg{display:block;margin-left:0;margin-top:2px}
+
+</style></head><body>
+<div class="hz"></div>
+<header>
+ <div class="lgl"><h1>TOLEDO<span>IMPORTS</span></h1><p>IMPORTAÇÃO DIRETA · ENVIO EM ATÉ 24H</p></div>
+ <div class="stmp">BASES<br><b>SP⇄CWB</b></div>
+</header>
+<div class="bar">
+ <input id="q" type="search" placeholder="BUSCAR PRODUTO…" autocomplete="off">
+ <div class="tabs" id="tabs">
+  <button type="button" class="tb on" data-t="all">TODOS</button>
+  <button type="button" class="tb" data-t="flores">FLORES</button>
+  <button type="button" class="tb" data-t="haxixe">HAXIXE</button>
+  <button type="button" class="tb" data-t="md">MD</button>
+  <button type="button" class="tb" data-t="gringas">GRINGAS</button>
+  <button type="button" class="tb" data-t="br">BALAS BR</button>
+  <button type="button" class="tb ttab" data-t="tabs">▤ TABELAS</button>
+ </div>
+ <div class="bsel" id="bsel">
+  <button type="button" class="bb on" data-b="all">TODAS AS BASES</button>
+  <button type="button" class="bb" data-b="SP">BASE SP</button>
+  <button type="button" class="bb" data-b="CWB">BASE CWB</button>
+ </div>
+</div>
+<main id="vshop"><section class="sec" data-sec="flores"><h2>FLORES<span class="cnt">12</span></h2><div class="grid">
+<article class="card" data-k="sativa" data-cat="flores" data-b="SP" data-n="sativa selecionada">
+<div class="media gstack"><img class="on" alt="SATIVA SELECIONADA" loading="lazy" src="https://drive.google.com/thumbnail?id=1_ZlL0Mdo-HJ9SoBbwuOtsqB-2up-qfjy&sz=w1000" onerror="if(!this.dataset.r){this.dataset.r=1;this.src='https://drive.usercontent.google.com/download?id=1_ZlL0Mdo-HJ9SoBbwuOtsqB-2up-qfjy&export=download&confirm=t'}else{var g=this.closest('.media');this.style.display='none';if(!Array.prototype.some.call(g.querySelectorAll('img'),function(x){return x!==this&&x.style.display!=='none'}))g.classList.add('sem-media')}}"><span class="mf"><small>imagem em breve</small></span>
+<span class="base">SP</span><span class="pb">PROMOÇÃO</span><span class="sku">TL·FLO·01</span></div>
+<div class="body">
+<h3>SATIVA SELECIONADA</h3>
+<p class="desc">ALTA POTÊNCIA · ÚLTIMOS KG DISPONÍVEIS</p>
+<div class="tiers"><div class="tier sel" data-i="0"><span>100G <i class="pg">R$ 5,00/g</i></span><b>R$ 500,00</b></div>
+<div class="tier" data-i="1"><span>500G <i class="pg">R$ 2,60/g</i></span><b>R$ 1.300,00</b></div>
+<div class="tier" data-i="2"><span>1KG <i class="pg">R$ 2,30/g</i></span><b>R$ 2.300,00</b></div></div>
+<div class="qtyrow"><span class="qlab">QTD.</span><div class="qty"><button type="button" class="qm">−</button><input class="qv" value="1" inputmode="numeric" aria-label="quantidade"><button type="button" class="qp">+</button></div></div>
+<button type="button" class="ctb">⧉ COPIAR TABELA DO PRODUTO</button>
+<div class="acts"><button type="button" class="bp">PEDIR AGORA</button><button type="button" class="ba">+ CARRINHO</button></div>
+</div></article>
+<article class="card" data-k="amnesia" data-cat="flores" data-b="SP" data-n="amnesia haze">
+<div class="media gstack"><img class="on" alt="AMNESIA HAZE" loading="lazy" src="https://drive.google.com/thumbnail?id=1NkOCuYt3oLcOZlH9GFLAMaLYodgK7N59&sz=w1000" onerror="if(!this.dataset.r){this.dataset.r=1;this.src='https://drive.usercontent.google.com/download?id=1NkOCuYt3oLcOZlH9GFLAMaLYodgK7N59&export=download&confirm=t'}else{var g=this.closest('.media');this.style.display='none';if(!Array.prototype.some.call(g.querySelectorAll('img'),function(x){return x!==this&&x.style.display!=='none'}))g.classList.add('sem-media')}}"><span class="mf"><small>imagem em breve</small></span>
+<span class="base">SP</span><span class="sku">TL·FLO·02</span></div>
+<div class="body">
+<h3>AMNESIA HAZE</h3>
+<p class="desc">CLÁSSICA INDIANA · CONSULTA FRETE</p>
+<div class="tiers"><div class="tier sel" data-i="0"><span>100G <i class="pg">sai R$ 1.300,00 p/ 100G</i></span><b>R$ 13,00<i class="tu"> /G</i></b></div>
+<div class="tier" data-i="1"><span>250G <i class="pg">sai R$ 3.000,00 p/ 250G</i></span><b>R$ 12,00<i class="tu"> /G</i></b></div>
+<div class="tier" data-i="2"><span>500G <i class="pg">sai R$ 5.500,00 p/ 500G</i></span><b>R$ 11,00<i class="tu"> /G</i></b></div>
+<div class="tier" data-i="3"><span>1KG <i class="pg">sai R$ 10.000,00 p/ 1KG</i></span><b>R$ 10,00<i class="tu"> /G</i></b></div></div>
+<div class="qtyrow"><span class="qlab">QTD.</span><div class="qty"><button type="button" class="qm">−</button><input class="qv" value="1" inputmode="numeric" aria-label="quantidade"><button type="button" class="qp">+</button></div></div>
+<button type="button" class="ctb">⧉ COPIAR TABELA DO PRODUTO</button>
+<div class="acts"><button type="button" class="bp">PEDIR AGORA</button><button type="button" class="ba">+ CARRINHO</button></div>
+</div></article>
+<article class="card" data-k="colombia" data-cat="flores" data-b="SP" data-n="colombia gold g3 original">
+<div class="media gstack"><img class="on cont" alt="COLOMBIA GOLD G3 ORIGINAL" loading="lazy" src="assets/colombia-g3.webp" onerror="if(!this.dataset.r){this.dataset.r=1;this.src=this.src.split('?')[0]+'?r='+Date.now()}else{var g=this.closest('.media');this.style.display='none';if(!Array.prototype.some.call(g.querySelectorAll('img'),function(x){return x!==this&&x.style.display!=='none'}))g.classList.add('sem-media')}}"><span class="mf"><small>imagem em breve</small></span>
+<span class="base">SP</span><span class="sku">TL·FLO·03</span></div>
+<div class="body">
+<h3>COLOMBIA GOLD G3 ORIGINAL</h3>
+<p class="desc">FRETE R$ 250 FIXO · RETIRADA EM SP · ENVIO EM ATÉ 24H</p>
+<div class="tiers"><div class="tier sel" data-i="0"><span>50G <i class="pg">sai R$ 600,00 p/ 50G</i></span><b>R$ 12,00<i class="tu"> /G</i></b></div>
+<div class="tier" data-i="1"><span>100G <i class="pg">sai R$ 1.100,00 p/ 100G</i></span><b>R$ 11,00<i class="tu"> /G</i></b></div>
+<div class="tier" data-i="2"><span>250G <i class="pg">sai R$ 2.500,00 p/ 250G</i></span><b>R$ 10,00<i class="tu"> /G</i></b></div>
+<div class="tier" data-i="3"><span>500G <i class="pg">sai R$ 4.000,00 p/ 500G</i></span><b>R$ 8,00<i class="tu"> /G</i></b></div>
+<div class="tier" data-i="4"><span>1KG <i class="pg">sai R$ 9.000,00 p/ 1KG</i></span><b>R$ 9,00<i class="tu"> /G</i></b></div></div>
+<div class="qtyrow"><span class="qlab">QTD.</span><div class="qty"><button type="button" class="qm">−</button><input class="qv" value="1" inputmode="numeric" aria-label="quantidade"><button type="button" class="qp">+</button></div></div>
+<button type="button" class="ctb">⧉ COPIAR TABELA DO PRODUTO</button>
+<div class="acts"><button type="button" class="bp">PEDIR AGORA</button><button type="button" class="ba">+ CARRINHO</button></div>
+</div></article>
+<article class="card" data-k="slh" data-cat="flores" data-b="SP" data-n="super lemon haze">
+<div class="media gstack"><img class="on" alt="SUPER LEMON HAZE" loading="lazy" src="https://drive.google.com/thumbnail?id=1BrjWaRt1d-EviYIbeDZ7jKa3SuZMz27h&sz=w1000" onerror="if(!this.dataset.r){this.dataset.r=1;this.src='https://drive.usercontent.google.com/download?id=1BrjWaRt1d-EviYIbeDZ7jKa3SuZMz27h&export=download&confirm=t'}else{var g=this.closest('.media');this.style.display='none';if(!Array.prototype.some.call(g.querySelectorAll('img'),function(x){return x!==this&&x.style.display!=='none'}))g.classList.add('sem-media')}}"><img class="" alt="SUPER LEMON HAZE" loading="lazy" src="https://drive.google.com/thumbnail?id=1dcAozt1FgQ3lrq955xg-wStlni16yH8f&sz=w1000" onerror="if(!this.dataset.r){this.dataset.r=1;this.src='https://drive.usercontent.google.com/download?id=1dcAozt1FgQ3lrq955xg-wStlni16yH8f&export=download&confirm=t'}else{var g=this.closest('.media');this.style.display='none';if(!Array.prototype.some.call(g.querySelectorAll('img'),function(x){return x!==this&&x.style.display!=='none'}))g.classList.add('sem-media')}}"><img class="" alt="SUPER LEMON HAZE" loading="lazy" src="https://drive.google.com/thumbnail?id=1dj1A8RLBdnbwXygI62W8qomvbnZEvHsb&sz=w1000" onerror="if(!this.dataset.r){this.dataset.r=1;this.src='https://drive.usercontent.google.com/download?id=1dj1A8RLBdnbwXygI62W8qomvbnZEvHsb&export=download&confirm=t'}else{var g=this.closest('.media');this.style.display='none';if(!Array.prototype.some.call(g.querySelectorAll('img'),function(x){return x!==this&&x.style.display!=='none'}))g.classList.add('sem-media')}}"><img class="" alt="SUPER LEMON HAZE" loading="lazy" src="https://drive.google.com/thumbnail?id=19T8uztrkVAfm6NoIFyZEuYvDhYa6PwbS&sz=w1000" onerror="if(!this.dataset.r){this.dataset.r=1;this.src='https://drive.usercontent.google.com/download?id=19T8uztrkVAfm6NoIFyZEuYvDhYa6PwbS&export=download&confirm=t'}else{var g=this.closest('.media');this.style.display='none';if(!Array.prototype.some.call(g.querySelectorAll('img'),function(x){return x!==this&&x.style.display!=='none'}))g.classList.add('sem-media')}}"><img class="" alt="SUPER LEMON HAZE" loading="lazy" src="https://drive.google.com/thumbnail?id=1Jn6KeoW_KC3plnSf_Wf1Q9cxFimwwk7j&sz=w1000" onerror="if(!this.dataset.r){this.dataset.r=1;this.src='https://drive.usercontent.google.com/download?id=1Jn6KeoW_KC3plnSf_Wf1Q9cxFimwwk7j&export=download&confirm=t'}else{var g=this.closest('.media');this.style.display='none';if(!Array.prototype.some.call(g.querySelectorAll('img'),function(x){return x!==this&&x.style.display!=='none'}))g.classList.add('sem-media')}}"><b class="gcnt">1/5</b><span class="gdots"><i class="on"></i><i></i><i></i><i></i><i></i></span><span class="mf"><small>imagem em breve</small></span>
+<span class="base">SP</span><span class="pb">ELAS VOLTARAM</span><span class="sku">TL·FLO·04</span></div>
+<div class="body">
+<h3>SUPER LEMON HAZE</h3>
+<p class="desc">ALTO THC · MELHOR CUSTO-BENEFÍCIO · GOSTO E CHEIRO CÍTRICO MARCANTE</p>
+<div class="tiers"><div class="tier sel" data-i="0"><span>100G <i class="pg">R$ 8,00/g</i></span><b>R$ 800,00</b></div>
+<div class="tier" data-i="1"><span>250G <i class="pg">R$ 7,00/g</i></span><b>R$ 1.750,00</b></div>
+<div class="tier" data-i="2"><span>500G <i class="pg">R$ 6,00/g</i></span><b>R$ 3.000,00</b></div>
+<div class="tier" data-i="3"><span>1KG <i class="pg">R$ 4,00/g</i></span><b>R$ 4.000,00</b></div></div>
+<div class="qtyrow"><span class="qlab">QTD.</span><div class="qty"><button type="button" class="qm">−</button><input class="qv" value="1" inputmode="numeric" aria-label="quantidade"><button type="button" class="qp">+</button></div></div>
+<button type="button" class="ctb">⧉ COPIAR TABELA DO PRODUTO</button>
+<div class="acts"><button type="button" class="bp">PEDIR AGORA</button><button type="button" class="ba">+ CARRINHO</button></div>
+</div></article>
+<article class="card" data-k="sourdiesel" data-cat="flores" data-b="SP" data-n="sour diesel">
+<div class="media gstack"><img class="on" alt="SOUR DIESEL" loading="lazy" src="https://drive.google.com/thumbnail?id=1Gq82A6ncQRiWGDBH1xloIWAfcijZuPxv&sz=w1000" onerror="if(!this.dataset.r){this.dataset.r=1;this.src='https://drive.usercontent.google.com/download?id=1Gq82A6ncQRiWGDBH1xloIWAfcijZuPxv&export=download&confirm=t'}else{var g=this.closest('.media');this.style.display='none';if(!Array.prototype.some.call(g.querySelectorAll('img'),function(x){return x!==this&&x.style.display!=='none'}))g.classList.add('sem-media')}}"><img class="" alt="SOUR DIESEL" loading="lazy" src="https://drive.google.com/thumbnail?id=1-7gc4JCKveU2TbOghf_pXMgwPhZtujOu&sz=w1000" onerror="if(!this.dataset.r){this.dataset.r=1;this.src='https://drive.usercontent.google.com/download?id=1-7gc4JCKveU2TbOghf_pXMgwPhZtujOu&export=download&confirm=t'}else{var g=this.closest('.media');this.style.display='none';if(!Array.prototype.some.call(g.querySelectorAll('img'),function(x){return x!==this&&x.style.display!=='none'}))g.classList.add('sem-media')}}"><b class="gcnt">1/2</b><span class="gdots"><i class="on"></i><i></i></span><span class="mf"><small>imagem em breve</small></span>
+<span class="base">SP</span><span class="pb">CHEGOU</span><span class="sku">TL·FLO·05</span></div>
+<div class="body">
+<h3>SOUR DIESEL</h3>
+<p class="desc">NOVA CHEGADA · CONSULTA TABELA DE FRETE</p>
+<div class="tiers"><div class="tier sel" data-i="0"><span>25G <i class="pg">sai R$ 425,00 p/ 25G</i></span><b>R$ 17,00<i class="tu"> /G</i></b></div>
+<div class="tier" data-i="1"><span>50G <i class="pg">sai R$ 750,00 p/ 50G</i></span><b>R$ 15,00<i class="tu"> /G</i></b></div>
+<div class="tier" data-i="2"><span>100G <i class="pg">sai R$ 1.400,00 p/ 100G</i></span><b>R$ 14,00<i class="tu"> /G</i></b></div>
+<div class="tier" data-i="3"><span>250G <i class="pg">sai R$ 3.250,00 p/ 250G</i></span><b>R$ 13,00<i class="tu"> /G</i></b></div>
+<div class="tier" data-i="4"><span>500G <i class="pg">sai R$ 6.000,00 p/ 500G</i></span><b>R$ 12,00<i class="tu"> /G</i></b></div>
+<div class="tier" data-i="5"><span>1KG <i class="pg">sai R$ 11.000,00 p/ 1KG</i></span><b>R$ 11,00<i class="tu"> /G</i></b></div></div>
+<div class="qtyrow"><span class="qlab">QTD.</span><div class="qty"><button type="button" class="qm">−</button><input class="qv" value="1" inputmode="numeric" aria-label="quantidade"><button type="button" class="qp">+</button></div></div>
+<button type="button" class="ctb">⧉ COPIAR TABELA DO PRODUTO</button>
+<div class="acts"><button type="button" class="bp">PEDIR AGORA</button><button type="button" class="ba">+ CARRINHO</button></div>
+</div></article>
+<article class="card" data-k="mimosa" data-cat="flores" data-b="SP" data-n="mimosa">
+<div class="media gstack"><img class="on" alt="MIMOSA" loading="lazy" src="https://drive.google.com/thumbnail?id=1yFpchTsBoyofn5cT2wG9RWUmpQaea0hG&sz=w1000" onerror="if(!this.dataset.r){this.dataset.r=1;this.src='https://drive.usercontent.google.com/download?id=1yFpchTsBoyofn5cT2wG9RWUmpQaea0hG&export=download&confirm=t'}else{var g=this.closest('.media');this.style.display='none';if(!Array.prototype.some.call(g.querySelectorAll('img'),function(x){return x!==this&&x.style.display!=='none'}))g.classList.add('sem-media')}}"><span class="mf"><small>imagem em breve</small></span>
+<span class="base">SP</span><span class="pb">CHEGOU</span><span class="sku">TL·FLO·06</span></div>
+<div class="body">
+<h3>MIMOSA</h3>
+<p class="desc">NOVA CHEGADA</p>
+<div class="tiers"><div class="tier sel" data-i="0"><span>25G <i class="pg">sai R$ 500,00 p/ 25G</i></span><b>R$ 20,00<i class="tu"> /G</i></b></div>
+<div class="tier" data-i="1"><span>50G <i class="pg">sai R$ 850,00 p/ 50G</i></span><b>R$ 17,00<i class="tu"> /G</i></b></div>
+<div class="tier" data-i="2"><span>100G <i class="pg">sai R$ 1.400,00 p/ 100G</i></span><b>R$ 14,00<i class="tu"> /G</i></b></div>
+<div class="tier" data-i="3"><span>250G <i class="pg">sai R$ 3.250,00 p/ 250G</i></span><b>R$ 13,00<i class="tu"> /G</i></b></div>
+<div class="tier" data-i="4"><span>500G <i class="pg">sai R$ 6.000,00 p/ 500G</i></span><b>R$ 12,00<i class="tu"> /G</i></b></div>
+<div class="tier" data-i="5"><span>1KG <i class="pg">sai R$ 11.000,00 p/ 1KG</i></span><b>R$ 11,00<i class="tu"> /G</i></b></div></div>
+<div class="qtyrow"><span class="qlab">QTD.</span><div class="qty"><button type="button" class="qm">−</button><input class="qv" value="1" inputmode="numeric" aria-label="quantidade"><button type="button" class="qp">+</button></div></div>
+<button type="button" class="ctb">⧉ COPIAR TABELA DO PRODUTO</button>
+<div class="acts"><button type="button" class="bp">PEDIR AGORA</button><button type="button" class="ba">+ CARRINHO</button></div>
+</div></article>
+<article class="card" data-k="lemoncherry" data-cat="flores" data-b="SP" data-n="lemon chery">
+<div class="media gstack"><img class="on" alt="LEMON CHERY" loading="lazy" src="https://drive.google.com/thumbnail?id=18fd4oN5I1VBsnH93DR6RmJQvfzujLTkv&sz=w1000" onerror="if(!this.dataset.r){this.dataset.r=1;this.src='https://drive.usercontent.google.com/download?id=18fd4oN5I1VBsnH93DR6RmJQvfzujLTkv&export=download&confirm=t'}else{var g=this.closest('.media');this.style.display='none';if(!Array.prototype.some.call(g.querySelectorAll('img'),function(x){return x!==this&&x.style.display!=='none'}))g.classList.add('sem-media')}}"><img class="" alt="LEMON CHERY" loading="lazy" src="https://drive.google.com/thumbnail?id=1xiyef_TviUnVcFi_WPkyGTOIXuSMvwyK&sz=w1000" onerror="if(!this.dataset.r){this.dataset.r=1;this.src='https://drive.usercontent.google.com/download?id=1xiyef_TviUnVcFi_WPkyGTOIXuSMvwyK&export=download&confirm=t'}else{var g=this.closest('.media');this.style.display='none';if(!Array.prototype.some.call(g.querySelectorAll('img'),function(x){return x!==this&&x.style.display!=='none'}))g.classList.add('sem-media')}}"><b class="gcnt">1/2</b><span class="gdots"><i class="on"></i><i></i></span><span class="mf"><small>imagem em breve</small></span>
+<span class="base">SP</span><span class="pb">CHEGOU</span><span class="sku">TL·FLO·07</span></div>
+<div class="body">
+<h3>LEMON CHERY</h3>
+<p class="desc">NOVA CHEGADA · CONSULTA TABELA DE FRETE</p>
+<div class="tiers"><div class="tier sel" data-i="0"><span>25G <i class="pg">sai R$ 500,00 p/ 25G</i></span><b>R$ 20,00<i class="tu"> /G</i></b></div>
+<div class="tier" data-i="1"><span>50G <i class="pg">sai R$ 850,00 p/ 50G</i></span><b>R$ 17,00<i class="tu"> /G</i></b></div>
+<div class="tier" data-i="2"><span>100G <i class="pg">sai R$ 1.600,00 p/ 100G</i></span><b>R$ 16,00<i class="tu"> /G</i></b></div>
+<div class="tier" data-i="3"><span>250G <i class="pg">sai R$ 3.750,00 p/ 250G</i></span><b>R$ 15,00<i class="tu"> /G</i></b></div>
+<div class="tier" data-i="4"><span>500G <i class="pg">sai R$ 6.500,00 p/ 500G</i></span><b>R$ 13,00<i class="tu"> /G</i></b></div>
+<div class="tier" data-i="5"><span>1KG <i class="pg">sai R$ 12.000,00 p/ 1KG</i></span><b>R$ 12,00<i class="tu"> /G</i></b></div></div>
+<div class="qtyrow"><span class="qlab">QTD.</span><div class="qty"><button type="button" class="qm">−</button><input class="qv" value="1" inputmode="numeric" aria-label="quantidade"><button type="button" class="qp">+</button></div></div>
+<button type="button" class="ctb">⧉ COPIAR TABELA DO PRODUTO</button>
+<div class="acts"><button type="button" class="bp">PEDIR AGORA</button><button type="button" class="ba">+ CARRINHO</button></div>
+</div></article>
+<article class="card" data-k="tropicana" data-cat="flores" data-b="CWB" data-n="tropicana">
+<div class="media gstack"><img class="on" alt="TROPICANA" loading="lazy" src="https://drive.google.com/thumbnail?id=1HaIJrQGMHdVnsq6OCkIBqWePt---GgMJ&sz=w1000" onerror="if(!this.dataset.r){this.dataset.r=1;this.src='https://drive.usercontent.google.com/download?id=1HaIJrQGMHdVnsq6OCkIBqWePt---GgMJ&export=download&confirm=t'}else{var g=this.closest('.media');this.style.display='none';if(!Array.prototype.some.call(g.querySelectorAll('img'),function(x){return x!==this&&x.style.display!=='none'}))g.classList.add('sem-media')}}"><span class="mf"><small>imagem em breve</small></span>
+<span class="base">CWB</span><span class="pb">CHEGOU</span><span class="sku">TL·FLO·08</span></div>
+<div class="body">
+<h3>TROPICANA</h3>
+<p class="desc">BASE CURITIBA</p>
+<div class="tiers"><div class="tier sel" data-i="0"><span>25G <i class="pg">sai R$ 500,00 p/ 25G</i></span><b>R$ 20,00<i class="tu"> /G</i></b></div>
+<div class="tier" data-i="1"><span>50G <i class="pg">sai R$ 800,00 p/ 50G</i></span><b>R$ 16,00<i class="tu"> /G</i></b></div>
+<div class="tier" data-i="2"><span>100G <i class="pg">sai R$ 1.500,00 p/ 100G</i></span><b>R$ 15,00<i class="tu"> /G</i></b></div>
+<div class="tier" data-i="3"><span>250G <i class="pg">sai R$ 3.500,00 p/ 250G</i></span><b>R$ 14,00<i class="tu"> /G</i></b></div>
+<div class="tier" data-i="4"><span>500G <i class="pg">sai R$ 6.500,00 p/ 500G</i></span><b>R$ 13,00<i class="tu"> /G</i></b></div>
+<div class="tier" data-i="5"><span>1KG <i class="pg">sai R$ 12.000,00 p/ 1KG</i></span><b>R$ 12,00<i class="tu"> /G</i></b></div></div>
+<div class="qtyrow"><span class="qlab">QTD.</span><div class="qty"><button type="button" class="qm">−</button><input class="qv" value="1" inputmode="numeric" aria-label="quantidade"><button type="button" class="qp">+</button></div></div>
+<button type="button" class="ctb">⧉ COPIAR TABELA DO PRODUTO</button>
+<div class="acts"><button type="button" class="bp">PEDIR AGORA</button><button type="button" class="ba">+ CARRINHO</button></div>
+</div></article>
+<article class="card" data-k="headbanger" data-cat="flores" data-b="SP" data-n="headbanger">
+<div class="media gstack"><img class="on" alt="HEADBANGER" loading="lazy" src="https://drive.google.com/thumbnail?id=1W-oEFvVYAMST9dFh0jOKXBAqNwDDQzRS&sz=w1000" onerror="if(!this.dataset.r){this.dataset.r=1;this.src='https://drive.usercontent.google.com/download?id=1W-oEFvVYAMST9dFh0jOKXBAqNwDDQzRS&export=download&confirm=t'}else{var g=this.closest('.media');this.style.display='none';if(!Array.prototype.some.call(g.querySelectorAll('img'),function(x){return x!==this&&x.style.display!=='none'}))g.classList.add('sem-media')}}"><img class="" alt="HEADBANGER" loading="lazy" src="https://drive.google.com/thumbnail?id=1YrRLYQyRCrEIrLAdU3JRSY8zbgm1Jg4D&sz=w1000" onerror="if(!this.dataset.r){this.dataset.r=1;this.src='https://drive.usercontent.google.com/download?id=1YrRLYQyRCrEIrLAdU3JRSY8zbgm1Jg4D&export=download&confirm=t'}else{var g=this.closest('.media');this.style.display='none';if(!Array.prototype.some.call(g.querySelectorAll('img'),function(x){return x!==this&&x.style.display!=='none'}))g.classList.add('sem-media')}}"><img class="" alt="HEADBANGER" loading="lazy" src="https://drive.google.com/thumbnail?id=1s9fI4lEOK-wBYTYJAQL-Hd9AhEmLBXuM&sz=w1000" onerror="if(!this.dataset.r){this.dataset.r=1;this.src='https://drive.usercontent.google.com/download?id=1s9fI4lEOK-wBYTYJAQL-Hd9AhEmLBXuM&export=download&confirm=t'}else{var g=this.closest('.media');this.style.display='none';if(!Array.prototype.some.call(g.querySelectorAll('img'),function(x){return x!==this&&x.style.display!=='none'}))g.classList.add('sem-media')}}"><b class="gcnt">1/3</b><span class="gdots"><i class="on"></i><i></i><i></i></span><span class="mf"><small>imagem em breve</small></span>
+<span class="base">SP</span><span class="pb">CHEGOU</span><span class="sku">TL·FLO·09</span></div>
+<div class="body">
+<h3>HEADBANGER</h3>
+<p class="desc">NOVA CHEGADA · CONSULTA TABELA DE FRETE</p>
+<div class="tiers"><div class="tier sel" data-i="0"><span>25G <i class="pg">sai R$ 500,00 p/ 25G</i></span><b>R$ 20,00<i class="tu"> /G</i></b></div>
+<div class="tier" data-i="1"><span>50G <i class="pg">sai R$ 850,00 p/ 50G</i></span><b>R$ 17,00<i class="tu"> /G</i></b></div>
+<div class="tier" data-i="2"><span>100G <i class="pg">sai R$ 1.600,00 p/ 100G</i></span><b>R$ 16,00<i class="tu"> /G</i></b></div>
+<div class="tier" data-i="3"><span>250G <i class="pg">sai R$ 3.750,00 p/ 250G</i></span><b>R$ 15,00<i class="tu"> /G</i></b></div>
+<div class="tier" data-i="4"><span>500G <i class="pg">sai R$ 7.000,00 p/ 500G</i></span><b>R$ 14,00<i class="tu"> /G</i></b></div>
+<div class="tier" data-i="5"><span>1KG <i class="pg">sai R$ 13.000,00 p/ 1KG</i></span><b>R$ 13,00<i class="tu"> /G</i></b></div>
+<div class="tier" data-i="6"><span>2KG <i class="pg">sai R$ 24.000,00 p/ 2KG</i></span><b>R$ 12,00<i class="tu"> /G</i></b></div></div>
+<div class="qtyrow"><span class="qlab">QTD.</span><div class="qty"><button type="button" class="qm">−</button><input class="qv" value="1" inputmode="numeric" aria-label="quantidade"><button type="button" class="qp">+</button></div></div>
+<button type="button" class="ctb">⧉ COPIAR TABELA DO PRODUTO</button>
+<div class="acts"><button type="button" class="bp">PEDIR AGORA</button><button type="button" class="ba">+ CARRINHO</button></div>
+</div></article>
+<article class="card" data-k="bluedream" data-cat="flores" data-b="SP" data-n="blue dream">
+<div class="media gstack"><img class="on" alt="BLUE DREAM" loading="lazy" src="assets/bluedream.webp" onerror="if(!this.dataset.r){this.dataset.r=1;this.src=this.src.split('?')[0]+'?r='+Date.now()}else{var g=this.closest('.media');this.style.display='none';if(!Array.prototype.some.call(g.querySelectorAll('img'),function(x){return x!==this&&x.style.display!=='none'}))g.classList.add('sem-media')}}"><span class="mf"><small>imagem em breve</small></span>
+<span class="base">SP</span><span class="pb">QUEIMA DE ESTOQUE</span><span class="sku">TL·FLO·10</span></div>
+<div class="body">
+<h3>BLUE DREAM</h3>
+<p class="desc">CONSULTA FRETE</p>
+<div class="tiers"><div class="tier sel" data-i="0"><span>50G <i class="pg">sai R$ 650,00 p/ 50G</i></span><b>R$ 13,00<i class="tu"> /G</i></b></div>
+<div class="tier" data-i="1"><span>100G <i class="pg">sai R$ 1.100,00 p/ 100G</i></span><b>R$ 11,00<i class="tu"> /G</i></b></div>
+<div class="tier" data-i="2"><span>250G <i class="pg">sai R$ 2.750,00 p/ 250G</i></span><b>R$ 11,00<i class="tu"> /G</i></b></div>
+<div class="tier" data-i="3"><span>500G <i class="pg">sai R$ 4.500,00 p/ 500G</i></span><b>R$ 9,00<i class="tu"> /G</i></b></div>
+<div class="tier" data-i="4"><span>1KG <i class="pg">sai R$ 8.000,00 p/ 1KG</i></span><b>R$ 8,00<i class="tu"> /G</i></b></div></div>
+<div class="qtyrow"><span class="qlab">QTD.</span><div class="qty"><button type="button" class="qm">−</button><input class="qv" value="1" inputmode="numeric" aria-label="quantidade"><button type="button" class="qp">+</button></div></div>
+<button type="button" class="ctb">⧉ COPIAR TABELA DO PRODUTO</button>
+<div class="acts"><button type="button" class="bp">PEDIR AGORA</button><button type="button" class="ba">+ CARRINHO</button></div>
+</div></article>
+<article class="card" data-k="gelato" data-cat="flores" data-b="SP" data-n="cookies gelato 41">
+<div class="media gstack"><img class="on" alt="COOKIES GELATO 41" loading="lazy" src="assets/gelato.webp" onerror="if(!this.dataset.r){this.dataset.r=1;this.src=this.src.split('?')[0]+'?r='+Date.now()}else{var g=this.closest('.media');this.style.display='none';if(!Array.prototype.some.call(g.querySelectorAll('img'),function(x){return x!==this&&x.style.display!=='none'}))g.classList.add('sem-media')}}"><span class="mf"><small>imagem em breve</small></span>
+<span class="base">SP</span><span class="pb">QUEIMA DE ESTOQUE</span><span class="sku">TL·FLO·11</span></div>
+<div class="body">
+<h3>COOKIES GELATO 41</h3>
+<p class="desc">THC ALTO · ALTA QUALIDADE · CONSULTA TABELA DE FRETE</p>
+<div class="tiers"><div class="tier sel" data-i="0"><span>25G <i class="pg">sai R$ 375,00 p/ 25G</i></span><b>R$ 15,00<i class="tu"> /G</i></b></div>
+<div class="tier" data-i="1"><span>50G <i class="pg">sai R$ 700,00 p/ 50G</i></span><b>R$ 14,00<i class="tu"> /G</i></b></div>
+<div class="tier" data-i="2"><span>100G <i class="pg">sai R$ 1.000,00 p/ 100G</i></span><b>R$ 10,00<i class="tu"> /G</i></b></div>
+<div class="tier" data-i="3"><span>250G <i class="pg">sai R$ 2.250,00 p/ 250G</i></span><b>R$ 9,00<i class="tu"> /G</i></b></div>
+<div class="tier" data-i="4"><span>500G <i class="pg">sai R$ 4.250,00 p/ 500G</i></span><b>R$ 8,50<i class="tu"> /G</i></b></div>
+<div class="tier" data-i="5"><span>1KG <i class="pg">sai R$ 8.000,00 p/ 1KG</i></span><b>R$ 8,00<i class="tu"> /G</i></b></div></div>
+<div class="qtyrow"><span class="qlab">QTD.</span><div class="qty"><button type="button" class="qm">−</button><input class="qv" value="1" inputmode="numeric" aria-label="quantidade"><button type="button" class="qp">+</button></div></div>
+<button type="button" class="ctb">⧉ COPIAR TABELA DO PRODUTO</button>
+<div class="acts"><button type="button" class="bp">PEDIR AGORA</button><button type="button" class="ba">+ CARRINHO</button></div>
+</div></article>
+<article class="card" data-k="whitewindows" data-cat="flores" data-b="SP" data-n="white windows · invernáculo">
+<div class="media gstack"><img class="on" alt="WHITE WINDOWS · INVERNÁCULO" loading="lazy" src="https://drive.google.com/thumbnail?id=1hWgHiL75IuMAum0idtnNUCf53gyWAKfz&sz=w1000" onerror="if(!this.dataset.r){this.dataset.r=1;this.src='https://drive.usercontent.google.com/download?id=1hWgHiL75IuMAum0idtnNUCf53gyWAKfz&export=download&confirm=t'}else{var g=this.closest('.media');this.style.display='none';if(!Array.prototype.some.call(g.querySelectorAll('img'),function(x){return x!==this&&x.style.display!=='none'}))g.classList.add('sem-media')}}"><img class="" alt="WHITE WINDOWS · INVERNÁCULO" loading="lazy" src="https://drive.google.com/thumbnail?id=1v-QiHtvzJZO2dsTjmTdYt_1kXfU-_P6m&sz=w1000" onerror="if(!this.dataset.r){this.dataset.r=1;this.src='https://drive.usercontent.google.com/download?id=1v-QiHtvzJZO2dsTjmTdYt_1kXfU-_P6m&export=download&confirm=t'}else{var g=this.closest('.media');this.style.display='none';if(!Array.prototype.some.call(g.querySelectorAll('img'),function(x){return x!==this&&x.style.display!=='none'}))g.classList.add('sem-media')}}"><b class="gcnt">1/2</b><span class="gdots"><i class="on"></i><i></i></span><span class="mf"><small>imagem em breve</small></span>
+<span class="base">SP</span><span class="pb">QUEIMA DE ESTOQUE</span><span class="sku">TL·FLO·12</span></div>
+<div class="body">
+<h3>WHITE WINDOWS · INVERNÁCULO</h3>
+<p class="desc">MATERIAL TOP ALTA QUALIDADE · ÚLTIMOS KG DISPONÍVEIS</p>
+<div class="tiers"><div class="tier sel" data-i="0"><span>100G <i class="pg">sai R$ 1.300,00 p/ 100G</i></span><b>R$ 13,00<i class="tu"> /G</i></b></div>
+<div class="tier" data-i="1"><span>250G <i class="pg">sai R$ 3.000,00 p/ 250G</i></span><b>R$ 12,00<i class="tu"> /G</i></b></div>
+<div class="tier" data-i="2"><span>500G <i class="pg">sai R$ 5.500,00 p/ 500G</i></span><b>R$ 11,00<i class="tu"> /G</i></b></div>
+<div class="tier" data-i="3"><span>1KG <i class="pg">sai R$ 10.000,00 p/ 1KG</i></span><b>R$ 10,00<i class="tu"> /G</i></b></div>
+<div class="tier" data-i="4"><span>3KG <i class="pg">sai R$ 27.000,00 p/ 3KG</i></span><b>R$ 9,00<i class="tu"> /G</i></b></div></div>
+<div class="qtyrow"><span class="qlab">QTD.</span><div class="qty"><button type="button" class="qm">−</button><input class="qv" value="1" inputmode="numeric" aria-label="quantidade"><button type="button" class="qp">+</button></div></div>
+<button type="button" class="ctb">⧉ COPIAR TABELA DO PRODUTO</button>
+<div class="acts"><button type="button" class="bp">PEDIR AGORA</button><button type="button" class="ba">+ CARRINHO</button></div>
+</div></article>
+</div></section>
+<section class="sec" data-sec="haxixe"><h2>HAXIXE<span class="cnt">2</span></h2><div class="grid">
+<article class="card" data-k="prensado" data-cat="haxixe" data-b="SP" data-n="prensado classe aa+ 2x1">
+<div class="media gstack"><img class="on" alt="PRENSADO CLASSE AA+ 2x1" loading="lazy" src="assets/prensado.webp" onerror="if(!this.dataset.r){this.dataset.r=1;this.src=this.src.split('?')[0]+'?r='+Date.now()}else{var g=this.closest('.media');this.style.display='none';if(!Array.prototype.some.call(g.querySelectorAll('img'),function(x){return x!==this&&x.style.display!=='none'}))g.classList.add('sem-media')}}"><img class="" alt="PRENSADO CLASSE AA+ 2x1" loading="lazy" src="assets/prensado2.webp" onerror="if(!this.dataset.r){this.dataset.r=1;this.src=this.src.split('?')[0]+'?r='+Date.now()}else{var g=this.closest('.media');this.style.display='none';if(!Array.prototype.some.call(g.querySelectorAll('img'),function(x){return x!==this&&x.style.display!=='none'}))g.classList.add('sem-media')}}"><b class="gcnt">1/2</b><span class="gdots"><i class="on"></i><i></i></span><span class="mf"><small>imagem em breve</small></span>
+<span class="base">SP</span><span class="sku">TL·HAX·01</span></div>
+<div class="body">
+<h3>PRENSADO CLASSE AA+ 2x1</h3>
+<p class="desc">VERDADE OS TOP · TRAMPO BEM FEITO · CONSULTA TABELA DE FRETE</p>
+<div class="tiers"><div class="tier sel" data-i="0"><span>BLOCO 500G <i class="pg">R$ 1,70/g</i></span><b>R$ 850,00</b></div>
+<div class="tier" data-i="1"><span>1 KG <i class="pg">R$ 1,30/g</i></span><b>R$ 1.300,00<i class="tu"> /KG</i></b></div>
+<div class="tier" data-i="2"><span>5 KG <i class="pg">R$ 1,00/g</i></span><b>R$ 1.000,00<i class="tu"> /KG</i></b></div>
+<div class="tier" data-i="3"><span>10 KG+ <i class="pg">R$ 0,95/g</i></span><b>R$ 950,00<i class="tu"> /KG</i></b></div></div>
+<div class="qtyrow"><span class="qlab">QTD.</span><div class="qty"><button type="button" class="qm">−</button><input class="qv" value="1" inputmode="numeric" aria-label="quantidade"><button type="button" class="qp">+</button></div></div>
+<button type="button" class="ctb">⧉ COPIAR TABELA DO PRODUTO</button>
+<div class="acts"><button type="button" class="bp">PEDIR AGORA</button><button type="button" class="ba">+ CARRINHO</button></div>
+</div></article>
+<article class="card" data-k="marronurso" data-cat="haxixe" data-b="SP" data-n="marron urso">
+<div class="media gstack"><img class="on" alt="MARRON URSO" loading="lazy" src="https://drive.google.com/thumbnail?id=1YxQHBGikry6zSZAM9FNz4lTc9jItLhEm&sz=w1000" onerror="if(!this.dataset.r){this.dataset.r=1;this.src='https://drive.usercontent.google.com/download?id=1YxQHBGikry6zSZAM9FNz4lTc9jItLhEm&export=download&confirm=t'}else{var g=this.closest('.media');this.style.display='none';if(!Array.prototype.some.call(g.querySelectorAll('img'),function(x){return x!==this&&x.style.display!=='none'}))g.classList.add('sem-media')}}"><span class="mf"><small>imagem em breve</small></span>
+<span class="base">SP</span><span class="pb">CHEGOU</span><span class="sku">TL·HAX·02</span></div>
+<div class="body">
+<h3>MARRON URSO</h3>
+<p class="desc">PLACAS · TRAMPO BEM FEITO · CONSULTA TABELA DE FRETE</p>
+<div class="tiers"><div class="tier sel" data-i="0"><span>1 PLACA </span><b>R$ 800,00<i class="tu"> /PLACA</i></b></div>
+<div class="tier" data-i="1"><span>5 PLACAS </span><b>R$ 700,00<i class="tu"> /PLACA</i></b></div>
+<div class="tier" data-i="2"><span>10 PLACAS </span><b>R$ 600,00<i class="tu"> /PLACA</i></b></div></div>
+<div class="qtyrow"><span class="qlab">QTD.</span><div class="qty"><button type="button" class="qm">−</button><input class="qv" value="1" inputmode="numeric" aria-label="quantidade"><button type="button" class="qp">+</button></div></div>
+<button type="button" class="ctb">⧉ COPIAR TABELA DO PRODUTO</button>
+<div class="acts"><button type="button" class="bp">PEDIR AGORA</button><button type="button" class="ba">+ CARRINHO</button></div>
+</div></article>
+</div></section>
+<section class="sec" data-sec="md"><h2>MD<span class="cnt">1</span></h2><div class="grid">
+<article class="card" data-k="mdalta" data-cat="md" data-b="SP" data-n="md alta pureza">
+<div class="media gstack"><img class="on" alt="MD ALTA PUREZA" loading="lazy" src="assets/md.webp" onerror="if(!this.dataset.r){this.dataset.r=1;this.src=this.src.split('?')[0]+'?r='+Date.now()}else{var g=this.closest('.media');this.style.display='none';if(!Array.prototype.some.call(g.querySelectorAll('img'),function(x){return x!==this&&x.style.display!=='none'}))g.classList.add('sem-media')}}"><img class="" alt="MD ALTA PUREZA" loading="lazy" src="assets/md2.webp" onerror="if(!this.dataset.r){this.dataset.r=1;this.src=this.src.split('?')[0]+'?r='+Date.now()}else{var g=this.closest('.media');this.style.display='none';if(!Array.prototype.some.call(g.querySelectorAll('img'),function(x){return x!==this&&x.style.display!=='none'}))g.classList.add('sem-media')}}"><b class="gcnt">1/2</b><span class="gdots"><i class="on"></i><i></i></span><span class="mf"><small>imagem em breve</small></span>
+<span class="base">SP</span><span class="pb">PROMOÇÃO</span><span class="sku">TL·MD·01</span></div>
+<div class="body">
+<h3>MD ALTA PUREZA</h3>
+<p class="desc">MD ONDA LIMPA · PRÓXIMO DO MDMA · CUSTO-BENEFÍCIO ÓTIMO PARA GIRO · ACIMA DE 1KG TEM PREÇO · ENVIO OU RETIRADA EM SP</p>
+<div class="tiers"><div class="tier sel" data-i="0"><span>50G <i class="pg">sai R$ 1.100,00 p/ 50G</i></span><b>R$ 22,00<i class="tu"> /G</i></b></div>
+<div class="tier" data-i="1"><span>100G <i class="pg">sai R$ 2.000,00 p/ 100G</i></span><b>R$ 20,00<i class="tu"> /G</i></b></div>
+<div class="tier" data-i="2"><span>500G <i class="pg">sai R$ 9.500,00 p/ 500G</i></span><b>R$ 19,00<i class="tu"> /G</i></b></div>
+<div class="tier" data-i="3"><span>1KG <i class="pg">sai R$ 18.000,00 p/ 1KG</i></span><b>R$ 18,00<i class="tu"> /G</i></b></div></div>
+<div class="qtyrow"><span class="qlab">QTD.</span><div class="qty"><button type="button" class="qm">−</button><input class="qv" value="1" inputmode="numeric" aria-label="quantidade"><button type="button" class="qp">+</button></div></div>
+<button type="button" class="ctb">⧉ COPIAR TABELA DO PRODUTO</button>
+<div class="acts"><button type="button" class="bp">PEDIR AGORA</button><button type="button" class="ba">+ CARRINHO</button></div>
+</div></article>
+</div></section>
+<section class="sec" data-sec="gringas"><h2>BALAS GRINGAS<span class="cnt">2</span></h2><div class="grid">
+<article class="card sem-media" data-k="granada" data-cat="gringas" data-b="SP" data-n="granada original">
+<div class="media gstack"><span class="mf"><small>imagem em breve</small></span>
+<span class="base">SP</span><span class="pb">PROMOÇÃO</span><span class="sku">TL·GRI·01</span></div>
+<div class="body">
+<h3>GRANADA ORIGINAL</h3>
+<p class="desc">ELEITA UMA DAS MELHORES GRINGAS · ESTOQUE LIMITADO · RETIRADA EM SP</p>
+<div class="tiers"><div class="tier sel" data-i="0"><span>25 UN. </span><b>R$ 25,00</b></div>
+<div class="tier" data-i="1"><span>50 UN. </span><b>R$ 20,00</b></div>
+<div class="tier" data-i="2"><span>100 UN. </span><b>R$ 20,00</b></div>
+<div class="tier" data-i="3"><span>500 UN. </span><b>R$ 19,00</b></div>
+<div class="tier" data-i="4"><span>1000 UN. </span><b>R$ 18,00</b></div>
+<div class="tier" data-i="5"><span>2000 UN. </span><b>R$ 17,00</b></div>
+<div class="tier" data-i="6"><span>3000 UN. </span><b>R$ 16,00</b></div></div>
+<div class="qtyrow"><span class="qlab">QTD.</span><div class="qty"><button type="button" class="qm">−</button><input class="qv" value="1" inputmode="numeric" aria-label="quantidade"><button type="button" class="qp">+</button></div></div>
+<button type="button" class="ctb">⧉ COPIAR TABELA DO PRODUTO</button>
+<div class="acts"><button type="button" class="bp">PEDIR AGORA</button><button type="button" class="ba">+ CARRINHO</button></div>
+</div></article>
+<article class="card sem-media" data-k="pegasus" data-cat="gringas" data-b="SP" data-n="pegasus">
+<div class="media gstack"><span class="mf"><small>imagem em breve</small></span>
+<span class="base">SP</span><span class="sku">TL·GRI·02</span></div>
+<div class="body">
+<h3>PEGASUS</h3>
+<p class="desc">DEPOSITOU ANTES DAS 12H DECOLA NO MESMO DIA · APÓS 12H DIA SEGUINTE</p>
+<div class="tiers"><div class="tier sel" data-i="0"><span>25 UN. </span><b>R$ 28,00</b></div>
+<div class="tier" data-i="1"><span>50 UN. </span><b>R$ 20,00</b></div>
+<div class="tier" data-i="2"><span>100 UN. </span><b>R$ 19,00</b></div>
+<div class="tier" data-i="3"><span>500 UN. </span><b>R$ 18,00</b></div>
+<div class="tier" data-i="4"><span>1000 UN. </span><b>R$ 17,00</b></div>
+<div class="tier" data-i="5"><span>2000 UN. </span><b>R$ 16,00</b></div>
+<div class="tier" data-i="6"><span>3000 UN. </span><b>R$ 15,00</b></div></div>
+<div class="qtyrow"><span class="qlab">QTD.</span><div class="qty"><button type="button" class="qm">−</button><input class="qv" value="1" inputmode="numeric" aria-label="quantidade"><button type="button" class="qp">+</button></div></div>
+<button type="button" class="ctb">⧉ COPIAR TABELA DO PRODUTO</button>
+<div class="acts"><button type="button" class="bp">PEDIR AGORA</button><button type="button" class="ba">+ CARRINHO</button></div>
+</div></article>
+</div></section>
+<section class="sec" data-sec="br"><h2>BALAS BR<span class="cnt">4</span></h2><div class="grid">
+<article class="card" data-k="phillies" data-cat="br" data-b="CWB" data-n="philips phein rosa 350mg + high">
+<div class="media gstack"><img class="on" alt="PHILIPS PHEIN ROSA 350MG + HIGH" loading="lazy" src="https://drive.google.com/thumbnail?id=10mKTFDYrR95Q9tr-maPHUbZqytz8tXpk&sz=w1000" onerror="if(!this.dataset.r){this.dataset.r=1;this.src='https://drive.usercontent.google.com/download?id=10mKTFDYrR95Q9tr-maPHUbZqytz8tXpk&export=download&confirm=t'}else{var g=this.closest('.media');this.style.display='none';if(!Array.prototype.some.call(g.querySelectorAll('img'),function(x){return x!==this&&x.style.display!=='none'}))g.classList.add('sem-media')}}"><span class="mf"><small>imagem em breve</small></span>
+<span class="base">CWB</span><span class="pb">MDA SUPER DOSADA</span><span class="sku">TL·BR·01</span></div>
+<div class="body">
+<h3>PHILIPS PHEIN ROSA 350MG + HIGH</h3>
+<p class="desc">MATERIAL FORTE ALTA QUALIDADE · SAI DE CWB JUNTO COM TODO MATERIAL</p>
+<div class="tiers"><div class="tier sel" data-i="0"><span>50 UN. </span><b>R$ 10,00</b></div>
+<div class="tier" data-i="1"><span>100 UN. </span><b>R$ 9,00</b></div>
+<div class="tier" data-i="2"><span>250 UN. </span><b>R$ 8,00</b></div>
+<div class="tier" data-i="3"><span>500 UN. </span><b>R$ 5,00</b></div>
+<div class="tier" data-i="4"><span>1000 UN. </span><b>R$ 4,00</b></div></div>
+<div class="qtyrow"><span class="qlab">QTD.</span><div class="qty"><button type="button" class="qm">−</button><input class="qv" value="1" inputmode="numeric" aria-label="quantidade"><button type="button" class="qp">+</button></div></div>
+<button type="button" class="ctb">⧉ COPIAR TABELA DO PRODUTO</button>
+<div class="acts"><button type="button" class="bp">PEDIR AGORA</button><button type="button" class="ba">+ CARRINHO</button></div>
+</div></article>
+<article class="card" data-k="redbulazul" data-cat="br" data-b="CWB" data-n="red bull azul 350mg + high">
+<div class="media gstack"><img class="on" alt="RED BULL AZUL 350MG + HIGH" loading="lazy" src="https://drive.google.com/thumbnail?id=1Xe5f6eRapRmLiCyTVczAiMHMvjk9v2Ej&sz=w1000" onerror="if(!this.dataset.r){this.dataset.r=1;this.src='https://drive.usercontent.google.com/download?id=1Xe5f6eRapRmLiCyTVczAiMHMvjk9v2Ej&export=download&confirm=t'}else{var g=this.closest('.media');this.style.display='none';if(!Array.prototype.some.call(g.querySelectorAll('img'),function(x){return x!==this&&x.style.display!=='none'}))g.classList.add('sem-media')}}"><span class="mf"><small>imagem em breve</small></span>
+<span class="base">CWB</span><span class="pb">MDA SUPER DOSADA</span><span class="sku">TL·BR·02</span></div>
+<div class="body">
+<h3>RED BULL AZUL 350MG + HIGH</h3>
+<p class="desc">MATERIAL FORTE ALTA QUALIDADE · SAI DE CWB JUNTO COM TODO MATERIAL</p>
+<div class="tiers"><div class="tier sel" data-i="0"><span>50 UN. </span><b>R$ 10,00</b></div>
+<div class="tier" data-i="1"><span>100 UN. </span><b>R$ 9,00</b></div>
+<div class="tier" data-i="2"><span>250 UN. </span><b>R$ 8,00</b></div>
+<div class="tier" data-i="3"><span>500 UN. </span><b>R$ 5,00</b></div>
+<div class="tier" data-i="4"><span>1000 UN. </span><b>R$ 4,00</b></div></div>
+<div class="qtyrow"><span class="qlab">QTD.</span><div class="qty"><button type="button" class="qm">−</button><input class="qv" value="1" inputmode="numeric" aria-label="quantidade"><button type="button" class="qp">+</button></div></div>
+<button type="button" class="ctb">⧉ COPIAR TABELA DO PRODUTO</button>
+<div class="acts"><button type="button" class="bp">PEDIR AGORA</button><button type="button" class="ba">+ CARRINHO</button></div>
+</div></article>
+<article class="card" data-k="bobesponja" data-cat="br" data-b="CWB" data-n="bob esponja 350mg + high">
+<div class="media gstack"><img class="on" alt="BOB ESPONJA 350MG + HIGH" loading="lazy" src="https://drive.google.com/thumbnail?id=1Mc_QcrRzbqTsPdXUanF5yrnyNAP_dE3s&sz=w1000" onerror="if(!this.dataset.r){this.dataset.r=1;this.src='https://drive.usercontent.google.com/download?id=1Mc_QcrRzbqTsPdXUanF5yrnyNAP_dE3s&export=download&confirm=t'}else{var g=this.closest('.media');this.style.display='none';if(!Array.prototype.some.call(g.querySelectorAll('img'),function(x){return x!==this&&x.style.display!=='none'}))g.classList.add('sem-media')}}"><span class="mf"><small>imagem em breve</small></span>
+<span class="base">CWB</span><span class="pb">MDA SUPER DOSADA</span><span class="sku">TL·BR·03</span></div>
+<div class="body">
+<h3>BOB ESPONJA 350MG + HIGH</h3>
+<p class="desc">MATERIAL FORTE ALTA QUALIDADE · SAI DE CWB JUNTO COM TODO MATERIAL</p>
+<div class="tiers"><div class="tier sel" data-i="0"><span>50 UN. </span><b>R$ 10,00</b></div>
+<div class="tier" data-i="1"><span>100 UN. </span><b>R$ 9,00</b></div>
+<div class="tier" data-i="2"><span>250 UN. </span><b>R$ 8,00</b></div>
+<div class="tier" data-i="3"><span>500 UN. </span><b>R$ 5,00</b></div>
+<div class="tier" data-i="4"><span>1000 UN. </span><b>R$ 4,00</b></div></div>
+<div class="qtyrow"><span class="qlab">QTD.</span><div class="qty"><button type="button" class="qm">−</button><input class="qv" value="1" inputmode="numeric" aria-label="quantidade"><button type="button" class="qp">+</button></div></div>
+<button type="button" class="ctb">⧉ COPIAR TABELA DO PRODUTO</button>
+<div class="acts"><button type="button" class="bp">PEDIR AGORA</button><button type="button" class="ba">+ CARRINHO</button></div>
+</div></article>
+<article class="card" data-k="abacaxi" data-cat="br" data-b="CWB" data-n="abacaxi 350mg">
+<div class="media gstack"><img class="on" alt="ABACAXI 350MG" loading="lazy" src="https://drive.google.com/thumbnail?id=1dDnqcfH5rPBtfrFP0tYHQFY1ZbqFXLjV&sz=w1000" onerror="if(!this.dataset.r){this.dataset.r=1;this.src='https://drive.usercontent.google.com/download?id=1dDnqcfH5rPBtfrFP0tYHQFY1ZbqFXLjV&export=download&confirm=t'}else{var g=this.closest('.media');this.style.display='none';if(!Array.prototype.some.call(g.querySelectorAll('img'),function(x){return x!==this&&x.style.display!=='none'}))g.classList.add('sem-media')}}"><span class="mf"><small>imagem em breve</small></span>
+<span class="base">CWB</span><span class="pb">MDA SUPER DOSADA</span><span class="sku">TL·BR·04</span></div>
+<div class="body">
+<h3>ABACAXI 350MG</h3>
+<p class="desc">MATERIAL FORTE ALTA QUALIDADE · SAI DE CWB JUNTO COM TODO MATERIAL</p>
+<div class="tiers"><div class="tier sel" data-i="0"><span>50 UN. </span><b>R$ 7,00</b></div>
+<div class="tier" data-i="1"><span>100 UN. </span><b>R$ 7,00</b></div>
+<div class="tier" data-i="2"><span>250 UN. </span><b>R$ 6,00</b></div>
+<div class="tier" data-i="3"><span>500 UN. </span><b>R$ 3,50</b></div>
+<div class="tier" data-i="4"><span>1000 UN. </span><b>R$ 2,50</b></div></div>
+<div class="qtyrow"><span class="qlab">QTD.</span><div class="qty"><button type="button" class="qm">−</button><input class="qv" value="1" inputmode="numeric" aria-label="quantidade"><button type="button" class="qp">+</button></div></div>
+<button type="button" class="ctb">⧉ COPIAR TABELA DO PRODUTO</button>
+<div class="acts"><button type="button" class="bp">PEDIR AGORA</button><button type="button" class="ba">+ CARRINHO</button></div>
+</div></article>
+</div></section>
+<p class="eof">— FIM DO CATÁLOGO —</p></main>
+<section id="vtabs" class="viewoff" aria-label="tabelas para copiar">
+ <h2 class="th">TABELAS PARA COPIAR</h2>
+ <p class="tsub">texto puro pra copiar, colar e editar no seu anúncio</p>
+ <button type="button" class="cpyall" id="cpall">COPIAR TUDO</button>
+ <div class="tblbox"><div class="tblhead"><span>FLORES</span><button type="button" class="cpy">COPIAR</button></div><pre>==============================
+FLORES
+==============================
+
+SATIVA SELECIONADA  [PROMOÇÃO]
+100G         R$ 500,00 · R$ 5,00/g
+500G         R$ 1.300,00 · R$ 2,60/g
+1KG          R$ 2.300,00 · R$ 2,30/g
+ALTA POTÊNCIA · ÚLTIMOS KG DISPONÍVEIS
+------------------------------
+AMNESIA HAZE
+100G         R$ 13,00 /G · mín. R$ 1.300,00
+250G         R$ 12,00 /G · mín. R$ 3.000,00
+500G         R$ 11,00 /G · mín. R$ 5.500,00
+1KG          R$ 10,00 /G · mín. R$ 10.000,00
+CLÁSSICA INDIANA · CONSULTA FRETE
+------------------------------
+COLOMBIA GOLD G3 ORIGINAL
+50G          R$ 12,00 /G · mín. R$ 600,00
+100G         R$ 11,00 /G · mín. R$ 1.100,00
+250G         R$ 10,00 /G · mín. R$ 2.500,00
+500G         R$ 8,00 /G · mín. R$ 4.000,00
+1KG          R$ 9,00 /G · mín. R$ 9.000,00
+FRETE R$ 250 FIXO · RETIRADA EM SP · ENVIO EM ATÉ 24H
+------------------------------
+SUPER LEMON HAZE  [ELAS VOLTARAM]
+100G         R$ 800,00 · R$ 8,00/g
+250G         R$ 1.750,00 · R$ 7,00/g
+500G         R$ 3.000,00 · R$ 6,00/g
+1KG          R$ 4.000,00 · R$ 4,00/g
+ALTO THC · MELHOR CUSTO-BENEFÍCIO · GOSTO E CHEIRO CÍTRICO MARCANTE
+------------------------------
+SOUR DIESEL  [CHEGOU]
+25G          R$ 17,00 /G · mín. R$ 425,00
+50G          R$ 15,00 /G · mín. R$ 750,00
+100G         R$ 14,00 /G · mín. R$ 1.400,00
+250G         R$ 13,00 /G · mín. R$ 3.250,00
+500G         R$ 12,00 /G · mín. R$ 6.000,00
+1KG          R$ 11,00 /G · mín. R$ 11.000,00
+NOVA CHEGADA · CONSULTA TABELA DE FRETE
+------------------------------
+MIMOSA  [CHEGOU]
+25G          R$ 20,00 /G · mín. R$ 500,00
+50G          R$ 17,00 /G · mín. R$ 850,00
+100G         R$ 14,00 /G · mín. R$ 1.400,00
+250G         R$ 13,00 /G · mín. R$ 3.250,00
+500G         R$ 12,00 /G · mín. R$ 6.000,00
+1KG          R$ 11,00 /G · mín. R$ 11.000,00
+NOVA CHEGADA
+------------------------------
+LEMON CHERY  [CHEGOU]
+25G          R$ 20,00 /G · mín. R$ 500,00
+50G          R$ 17,00 /G · mín. R$ 850,00
+100G         R$ 16,00 /G · mín. R$ 1.600,00
+250G         R$ 15,00 /G · mín. R$ 3.750,00
+500G         R$ 13,00 /G · mín. R$ 6.500,00
+1KG          R$ 12,00 /G · mín. R$ 12.000,00
+NOVA CHEGADA · CONSULTA TABELA DE FRETE
+------------------------------
+TROPICANA  [CHEGOU]
+25G          R$ 20,00 /G · mín. R$ 500,00
+50G          R$ 16,00 /G · mín. R$ 800,00
+100G         R$ 15,00 /G · mín. R$ 1.500,00
+250G         R$ 14,00 /G · mín. R$ 3.500,00
+500G         R$ 13,00 /G · mín. R$ 6.500,00
+1KG          R$ 12,00 /G · mín. R$ 12.000,00
+BASE CURITIBA
+------------------------------
+HEADBANGER  [CHEGOU]
+25G          R$ 20,00 /G · mín. R$ 500,00
+50G          R$ 17,00 /G · mín. R$ 850,00
+100G         R$ 16,00 /G · mín. R$ 1.600,00
+250G         R$ 15,00 /G · mín. R$ 3.750,00
+500G         R$ 14,00 /G · mín. R$ 7.000,00
+1KG          R$ 13,00 /G · mín. R$ 13.000,00
+2KG          R$ 12,00 /G · mín. R$ 24.000,00
+NOVA CHEGADA · CONSULTA TABELA DE FRETE
+------------------------------
+BLUE DREAM  [QUEIMA DE ESTOQUE]
+50G          R$ 13,00 /G · mín. R$ 650,00
+100G         R$ 11,00 /G · mín. R$ 1.100,00
+250G         R$ 11,00 /G · mín. R$ 2.750,00
+500G         R$ 9,00 /G · mín. R$ 4.500,00
+1KG          R$ 8,00 /G · mín. R$ 8.000,00
+CONSULTA FRETE
+------------------------------
+COOKIES GELATO 41  [QUEIMA DE ESTOQUE]
+25G          R$ 15,00 /G · mín. R$ 375,00
+50G          R$ 14,00 /G · mín. R$ 700,00
+100G         R$ 10,00 /G · mín. R$ 1.000,00
+250G         R$ 9,00 /G · mín. R$ 2.250,00
+500G         R$ 8,50 /G · mín. R$ 4.250,00
+1KG          R$ 8,00 /G · mín. R$ 8.000,00
+THC ALTO · ALTA QUALIDADE · CONSULTA TABELA DE FRETE
+------------------------------
+WHITE WINDOWS · INVERNÁCULO  [QUEIMA DE ESTOQUE]
+100G         R$ 13,00 /G · mín. R$ 1.300,00
+250G         R$ 12,00 /G · mín. R$ 3.000,00
+500G         R$ 11,00 /G · mín. R$ 5.500,00
+1KG          R$ 10,00 /G · mín. R$ 10.000,00
+3KG          R$ 9,00 /G · mín. R$ 27.000,00
+MATERIAL TOP ALTA QUALIDADE · ÚLTIMOS KG DISPONÍVEIS
+------------------------------</pre></div>
+<div class="tblbox"><div class="tblhead"><span>HAXIXE</span><button type="button" class="cpy">COPIAR</button></div><pre>==============================
+HAXIXE
+==============================
+
+PRENSADO CLASSE AA+ 2X1
+BLOCO 500G   R$ 850,00 · R$ 1,70/g
+1 KG         R$ 1.300,00 /KG · R$ 1,30/g
+5 KG         R$ 1.000,00 /KG · R$ 1,00/g
+10 KG+       R$ 950,00 /KG · R$ 0,95/g
+VERDADE OS TOP · TRAMPO BEM FEITO · CONSULTA TABELA DE FRETE
+------------------------------
+MARRON URSO  [CHEGOU]
+1 PLACA      R$ 800,00 /PLACA
+5 PLACAS     R$ 700,00 /PLACA
+10 PLACAS    R$ 600,00 /PLACA
+PLACAS · TRAMPO BEM FEITO · CONSULTA TABELA DE FRETE
+------------------------------</pre></div>
+<div class="tblbox"><div class="tblhead"><span>MD</span><button type="button" class="cpy">COPIAR</button></div><pre>==============================
+MD
+==============================
+
+MD ALTA PUREZA  [PROMOÇÃO]
+50G          R$ 22,00 /G · mín. R$ 1.100,00
+100G         R$ 20,00 /G · mín. R$ 2.000,00
+500G         R$ 19,00 /G · mín. R$ 9.500,00
+1KG          R$ 18,00 /G · mín. R$ 18.000,00
+MD ONDA LIMPA · PRÓXIMO DO MDMA · CUSTO-BENEFÍCIO ÓTIMO PARA GIRO · ACIMA DE 1KG TEM PREÇO · ENVIO OU RETIRADA EM SP
+------------------------------</pre></div>
+<div class="tblbox"><div class="tblhead"><span>BALAS GRINGAS</span><button type="button" class="cpy">COPIAR</button></div><pre>==============================
+BALAS GRINGAS
+==============================
+
+GRANADA ORIGINAL  [PROMOÇÃO]
+25 UN.       R$ 25,00
+50 UN.       R$ 20,00
+100 UN.      R$ 20,00
+500 UN.      R$ 19,00
+1000 UN.     R$ 18,00
+2000 UN.     R$ 17,00
+3000 UN.     R$ 16,00
+ELEITA UMA DAS MELHORES GRINGAS · ESTOQUE LIMITADO · RETIRADA EM SP
+------------------------------
+PEGASUS
+25 UN.       R$ 28,00
+50 UN.       R$ 20,00
+100 UN.      R$ 19,00
+500 UN.      R$ 18,00
+1000 UN.     R$ 17,00
+2000 UN.     R$ 16,00
+3000 UN.     R$ 15,00
+DEPOSITOU ANTES DAS 12H DECOLA NO MESMO DIA · APÓS 12H DIA SEGUINTE
+------------------------------</pre></div>
+<div class="tblbox"><div class="tblhead"><span>BALAS BR</span><button type="button" class="cpy">COPIAR</button></div><pre>==============================
+BALAS BR
+==============================
+MDA SUPER DOSADAS — SAINDO DE CWB
+
+PHILIPS PHEIN ROSA 350MG + HIGH  [MDA SUPER DOSADA]
+50 UN.       R$ 10,00
+100 UN.      R$ 9,00
+250 UN.      R$ 8,00
+500 UN.      R$ 5,00
+1000 UN.     R$ 4,00
+MATERIAL FORTE ALTA QUALIDADE · SAI DE CWB JUNTO COM TODO MATERIAL
+------------------------------
+RED BULL AZUL 350MG + HIGH  [MDA SUPER DOSADA]
+50 UN.       R$ 10,00
+100 UN.      R$ 9,00
+250 UN.      R$ 8,00
+500 UN.      R$ 5,00
+1000 UN.     R$ 4,00
+MATERIAL FORTE ALTA QUALIDADE · SAI DE CWB JUNTO COM TODO MATERIAL
+------------------------------
+BOB ESPONJA 350MG + HIGH  [MDA SUPER DOSADA]
+50 UN.       R$ 10,00
+100 UN.      R$ 9,00
+250 UN.      R$ 8,00
+500 UN.      R$ 5,00
+1000 UN.     R$ 4,00
+MATERIAL FORTE ALTA QUALIDADE · SAI DE CWB JUNTO COM TODO MATERIAL
+------------------------------
+ABACAXI 350MG  [MDA SUPER DOSADA]
+50 UN.       R$ 7,00
+100 UN.      R$ 7,00
+250 UN.      R$ 6,00
+500 UN.      R$ 3,50
+1000 UN.     R$ 2,50
+MATERIAL FORTE ALTA QUALIDADE · SAI DE CWB JUNTO COM TODO MATERIAL
+------------------------------</pre></div>
+</section>
+<footer><div class="hz slim"></div><p>TOLEDO IMPORTS © 2026 · SP ⇄ CWB · PEDIDOS PELO WHATS</p></footer>
+<button type="button" id="cartb" aria-label="carrinho">🧺<b id="cartn" class="off">0</b></button>
+<div id="scrim"></div>
+<div id="drawer" role="dialog" aria-label="carrinho">
+ <div class="hz slim"></div>
+ <div class="dhead"><b>SEU PEDIDO <span id="dcnt">(0)</span></b><button type="button" id="dclos">✕</button></div>
+ <div class="dwrap">
+  <div id="dempty" class="dempty">CARRINHO VAZIO.<br>ADICIONE PRODUTOS AQUI EM CIMA</div>
+  <div id="dlines" hidden></div>
+  <div id="dtot" class="dtot" hidden></div>
+  <form id="dform" novalidate>
+   <div class="fflag">DADOS DE ENTREGA</div>
+   <input name="nome" placeholder="NOME *" autocomplete="off">
+   <input name="cpf" placeholder="CPF (se quiser)" maxlength="14" autocomplete="off">
+   <input name="end" placeholder="ENDEREÇO — RUA, NÚMERO *" autocomplete="off">
+   <div class="row2"><input name="bairro" placeholder="BAIRRO" autocomplete="off"><input name="cid" placeholder="CIDADE" autocomplete="off"></div>
+   <div class="row2"><input name="uf" placeholder="UF" maxlength="2" style="width:70px" autocomplete="off"><input name="cep" placeholder="CEP" maxlength="9" autocomplete="off"></div>
+   <textarea name="obs" rows="2" placeholder="OBS — forma de pagamento, horário, combinado (opcional)"></textarea>
+  </form>
+  <div class="dacts">
+   <button type="button" class="dw" id="sendwa">ENVIAR PEDIDO NO WHATS ↗</button>
+   <button type="button" class="dt2" id="sendtx">BAIXAR .TXT</button>
+  </div>
+ </div>
+</div>
+<div id="toast"></div>
+<div id="lb"><img id="lbi" alt=""><div class="lbbar"><b id="lbcap"></b><button type="button" id="lbpv">‹</button><button type="button" id="lbpx">›</button><button type="button" id="lbdl">⬇</button><button type="button" id="lbx">✕</button></div></div>
+<script>
+(function(){
+'use strict';
+(function(){var o=window.open.bind(window);window.open=function(u,w){return u?o(u,w):null};})();
+var NUM='447414958410';
+var PD={"sativa": {"n": "SATIVA SELECIONADA", "b": "SP", "t": [["100G", 500, "", 5.0, 1], ["500G", 1300, "", 2.6, 1], ["1KG", 2300, "", 2.3, 1]], "ms": ["https://drive.google.com/thumbnail?id=1_ZlL0Mdo-HJ9SoBbwuOtsqB-2up-qfjy&sz=w1000"], "md": ["https://drive.usercontent.google.com/download?id=1_ZlL0Mdo-HJ9SoBbwuOtsqB-2up-qfjy&export=download&confirm=t"]}, "amnesia": {"n": "AMNESIA HAZE", "b": "SP", "t": [["100G", 13, "G", 13.0, 100], ["250G", 12, "G", 12.0, 250], ["500G", 11, "G", 11.0, 500], ["1KG", 10, "G", 10.0, 1000]], "ms": ["https://drive.google.com/thumbnail?id=1NkOCuYt3oLcOZlH9GFLAMaLYodgK7N59&sz=w1000"], "md": ["https://drive.usercontent.google.com/download?id=1NkOCuYt3oLcOZlH9GFLAMaLYodgK7N59&export=download&confirm=t"]}, "colombia": {"n": "COLOMBIA GOLD G3 ORIGINAL", "b": "SP", "t": [["50G", 12, "G", 12.0, 50], ["100G", 11, "G", 11.0, 100], ["250G", 10, "G", 10.0, 250], ["500G", 8, "G", 8.0, 500], ["1KG", 9, "G", 9.0, 1000]], "ms": ["assets/colombia-g3.webp"], "md": ["assets/colombia-g3.webp"]}, "slh": {"n": "SUPER LEMON HAZE", "b": "SP", "t": [["100G", 800, "", 8.0, 1], ["250G", 1750, "", 7.0, 1], ["500G", 3000, "", 6.0, 1], ["1KG", 4000, "", 4.0, 1]], "ms": ["https://drive.google.com/thumbnail?id=1BrjWaRt1d-EviYIbeDZ7jKa3SuZMz27h&sz=w1000", "https://drive.google.com/thumbnail?id=1dcAozt1FgQ3lrq955xg-wStlni16yH8f&sz=w1000", "https://drive.google.com/thumbnail?id=1dj1A8RLBdnbwXygI62W8qomvbnZEvHsb&sz=w1000", "https://drive.google.com/thumbnail?id=19T8uztrkVAfm6NoIFyZEuYvDhYa6PwbS&sz=w1000", "https://drive.google.com/thumbnail?id=1Jn6KeoW_KC3plnSf_Wf1Q9cxFimwwk7j&sz=w1000"], "md": ["https://drive.usercontent.google.com/download?id=1BrjWaRt1d-EviYIbeDZ7jKa3SuZMz27h&export=download&confirm=t", "https://drive.usercontent.google.com/download?id=1dcAozt1FgQ3lrq955xg-wStlni16yH8f&export=download&confirm=t", "https://drive.usercontent.google.com/download?id=1dj1A8RLBdnbwXygI62W8qomvbnZEvHsb&export=download&confirm=t", "https://drive.usercontent.google.com/download?id=19T8uztrkVAfm6NoIFyZEuYvDhYa6PwbS&export=download&confirm=t", "https://drive.usercontent.google.com/download?id=1Jn6KeoW_KC3plnSf_Wf1Q9cxFimwwk7j&export=download&confirm=t"]}, "sourdiesel": {"n": "SOUR DIESEL", "b": "SP", "t": [["25G", 17, "G", 17.0, 25], ["50G", 15, "G", 15.0, 50], ["100G", 14, "G", 14.0, 100], ["250G", 13, "G", 13.0, 250], ["500G", 12, "G", 12.0, 500], ["1KG", 11, "G", 11.0, 1000]], "ms": ["https://drive.google.com/thumbnail?id=1Gq82A6ncQRiWGDBH1xloIWAfcijZuPxv&sz=w1000", "https://drive.google.com/thumbnail?id=1-7gc4JCKveU2TbOghf_pXMgwPhZtujOu&sz=w1000"], "md": ["https://drive.usercontent.google.com/download?id=1Gq82A6ncQRiWGDBH1xloIWAfcijZuPxv&export=download&confirm=t", "https://drive.usercontent.google.com/download?id=1-7gc4JCKveU2TbOghf_pXMgwPhZtujOu&export=download&confirm=t"]}, "mimosa": {"n": "MIMOSA", "b": "SP", "t": [["25G", 20, "G", 20.0, 25], ["50G", 17, "G", 17.0, 50], ["100G", 14, "G", 14.0, 100], ["250G", 13, "G", 13.0, 250], ["500G", 12, "G", 12.0, 500], ["1KG", 11, "G", 11.0, 1000]], "ms": ["https://drive.google.com/thumbnail?id=1yFpchTsBoyofn5cT2wG9RWUmpQaea0hG&sz=w1000"], "md": ["https://drive.usercontent.google.com/download?id=1yFpchTsBoyofn5cT2wG9RWUmpQaea0hG&export=download&confirm=t"]}, "lemoncherry": {"n": "LEMON CHERY", "b": "SP", "t": [["25G", 20, "G", 20.0, 25], ["50G", 17, "G", 17.0, 50], ["100G", 16, "G", 16.0, 100], ["250G", 15, "G", 15.0, 250], ["500G", 13, "G", 13.0, 500], ["1KG", 12, "G", 12.0, 1000]], "ms": ["https://drive.google.com/thumbnail?id=18fd4oN5I1VBsnH93DR6RmJQvfzujLTkv&sz=w1000", "https://drive.google.com/thumbnail?id=1xiyef_TviUnVcFi_WPkyGTOIXuSMvwyK&sz=w1000"], "md": ["https://drive.usercontent.google.com/download?id=18fd4oN5I1VBsnH93DR6RmJQvfzujLTkv&export=download&confirm=t", "https://drive.usercontent.google.com/download?id=1xiyef_TviUnVcFi_WPkyGTOIXuSMvwyK&export=download&confirm=t"]}, "tropicana": {"n": "TROPICANA", "b": "CWB", "t": [["25G", 20, "G", 20.0, 25], ["50G", 16, "G", 16.0, 50], ["100G", 15, "G", 15.0, 100], ["250G", 14, "G", 14.0, 250], ["500G", 13, "G", 13.0, 500], ["1KG", 12, "G", 12.0, 1000]], "ms": ["https://drive.google.com/thumbnail?id=1HaIJrQGMHdVnsq6OCkIBqWePt---GgMJ&sz=w1000"], "md": ["https://drive.usercontent.google.com/download?id=1HaIJrQGMHdVnsq6OCkIBqWePt---GgMJ&export=download&confirm=t"]}, "headbanger": {"n": "HEADBANGER", "b": "SP", "t": [["25G", 20, "G", 20.0, 25], ["50G", 17, "G", 17.0, 50], ["100G", 16, "G", 16.0, 100], ["250G", 15, "G", 15.0, 250], ["500G", 14, "G", 14.0, 500], ["1KG", 13, "G", 13.0, 1000], ["2KG", 12, "G", 12.0, 2000]], "ms": ["https://drive.google.com/thumbnail?id=1W-oEFvVYAMST9dFh0jOKXBAqNwDDQzRS&sz=w1000", "https://drive.google.com/thumbnail?id=1YrRLYQyRCrEIrLAdU3JRSY8zbgm1Jg4D&sz=w1000", "https://drive.google.com/thumbnail?id=1s9fI4lEOK-wBYTYJAQL-Hd9AhEmLBXuM&sz=w1000"], "md": ["https://drive.usercontent.google.com/download?id=1W-oEFvVYAMST9dFh0jOKXBAqNwDDQzRS&export=download&confirm=t", "https://drive.usercontent.google.com/download?id=1YrRLYQyRCrEIrLAdU3JRSY8zbgm1Jg4D&export=download&confirm=t", "https://drive.usercontent.google.com/download?id=1s9fI4lEOK-wBYTYJAQL-Hd9AhEmLBXuM&export=download&confirm=t"]}, "bluedream": {"n": "BLUE DREAM", "b": "SP", "t": [["50G", 13, "G", 13.0, 50], ["100G", 11, "G", 11.0, 100], ["250G", 11, "G", 11.0, 250], ["500G", 9, "G", 9.0, 500], ["1KG", 8, "G", 8.0, 1000]], "ms": ["assets/bluedream.webp"], "md": ["assets/bluedream.webp"]}, "gelato": {"n": "COOKIES GELATO 41", "b": "SP", "t": [["25G", 15, "G", 15.0, 25], ["50G", 14, "G", 14.0, 50], ["100G", 10, "G", 10.0, 100], ["250G", 9, "G", 9.0, 250], ["500G", 8.5, "G", 8.5, 500], ["1KG", 8, "G", 8.0, 1000]], "ms": ["assets/gelato.webp"], "md": ["assets/gelato.webp"]}, "whitewindows": {"n": "WHITE WINDOWS · INVERNÁCULO", "b": "SP", "t": [["100G", 13, "G", 13.0, 100], ["250G", 12, "G", 12.0, 250], ["500G", 11, "G", 11.0, 500], ["1KG", 10, "G", 10.0, 1000], ["3KG", 9, "G", 9.0, 3000]], "ms": ["https://drive.google.com/thumbnail?id=1hWgHiL75IuMAum0idtnNUCf53gyWAKfz&sz=w1000", "https://drive.google.com/thumbnail?id=1v-QiHtvzJZO2dsTjmTdYt_1kXfU-_P6m&sz=w1000"], "md": ["https://drive.usercontent.google.com/download?id=1hWgHiL75IuMAum0idtnNUCf53gyWAKfz&export=download&confirm=t", "https://drive.usercontent.google.com/download?id=1v-QiHtvzJZO2dsTjmTdYt_1kXfU-_P6m&export=download&confirm=t"]}, "prensado": {"n": "PRENSADO CLASSE AA+ 2x1", "b": "SP", "t": [["BLOCO 500G", 850, "", 1.7, 1], ["1 KG", 1300, "KG", 1.3, 1], ["5 KG", 1000, "KG", 1.0, 5], ["10 KG+", 950, "KG", 0.95, 10]], "ms": ["assets/prensado.webp", "assets/prensado2.webp"], "md": ["assets/prensado.webp", "assets/prensado2.webp"]}, "marronurso": {"n": "MARRON URSO", "b": "SP", "t": [["1 PLACA", 800, "PLACA", null, 1], ["5 PLACAS", 700, "PLACA", null, 5], ["10 PLACAS", 600, "PLACA", null, 10]], "ms": ["https://drive.google.com/thumbnail?id=1YxQHBGikry6zSZAM9FNz4lTc9jItLhEm&sz=w1000"], "md": ["https://drive.usercontent.google.com/download?id=1YxQHBGikry6zSZAM9FNz4lTc9jItLhEm&export=download&confirm=t"]}, "mdalta": {"n": "MD ALTA PUREZA", "b": "SP", "t": [["50G", 22, "G", 22.0, 50], ["100G", 20, "G", 20.0, 100], ["500G", 19, "G", 19.0, 500], ["1KG", 18, "G", 18.0, 1000]], "ms": ["assets/md.webp", "assets/md2.webp"], "md": ["assets/md.webp", "assets/md2.webp"]}, "granada": {"n": "GRANADA ORIGINAL", "b": "SP", "t": [["25 UN.", 25, "", null, 1], ["50 UN.", 20, "", null, 1], ["100 UN.", 20, "", null, 1], ["500 UN.", 19, "", null, 1], ["1000 UN.", 18, "", null, 1], ["2000 UN.", 17, "", null, 1], ["3000 UN.", 16, "", null, 1]], "ms": [], "md": []}, "pegasus": {"n": "PEGASUS", "b": "SP", "t": [["25 UN.", 28, "", null, 1], ["50 UN.", 20, "", null, 1], ["100 UN.", 19, "", null, 1], ["500 UN.", 18, "", null, 1], ["1000 UN.", 17, "", null, 1], ["2000 UN.", 16, "", null, 1], ["3000 UN.", 15, "", null, 1]], "ms": [], "md": []}, "phillies": {"n": "PHILIPS PHEIN ROSA 350MG + HIGH", "b": "CWB", "t": [["50 UN.", 10, "", null, 1], ["100 UN.", 9, "", null, 1], ["250 UN.", 8, "", null, 1], ["500 UN.", 5, "", null, 1], ["1000 UN.", 4, "", null, 1]], "ms": ["https://drive.google.com/thumbnail?id=10mKTFDYrR95Q9tr-maPHUbZqytz8tXpk&sz=w1000"], "md": ["https://drive.usercontent.google.com/download?id=10mKTFDYrR95Q9tr-maPHUbZqytz8tXpk&export=download&confirm=t"]}, "redbulazul": {"n": "RED BULL AZUL 350MG + HIGH", "b": "CWB", "t": [["50 UN.", 10, "", null, 1], ["100 UN.", 9, "", null, 1], ["250 UN.", 8, "", null, 1], ["500 UN.", 5, "", null, 1], ["1000 UN.", 4, "", null, 1]], "ms": ["https://drive.google.com/thumbnail?id=1Xe5f6eRapRmLiCyTVczAiMHMvjk9v2Ej&sz=w1000"], "md": ["https://drive.usercontent.google.com/download?id=1Xe5f6eRapRmLiCyTVczAiMHMvjk9v2Ej&export=download&confirm=t"]}, "bobesponja": {"n": "BOB ESPONJA 350MG + HIGH", "b": "CWB", "t": [["50 UN.", 10, "", null, 1], ["100 UN.", 9, "", null, 1], ["250 UN.", 8, "", null, 1], ["500 UN.", 5, "", null, 1], ["1000 UN.", 4, "", null, 1]], "ms": ["https://drive.google.com/thumbnail?id=1Mc_QcrRzbqTsPdXUanF5yrnyNAP_dE3s&sz=w1000"], "md": ["https://drive.usercontent.google.com/download?id=1Mc_QcrRzbqTsPdXUanF5yrnyNAP_dE3s&export=download&confirm=t"]}, "abacaxi": {"n": "ABACAXI 350MG", "b": "CWB", "t": [["50 UN.", 7, "", null, 1], ["100 UN.", 7, "", null, 1], ["250 UN.", 6, "", null, 1], ["500 UN.", 3.5, "", null, 1], ["1000 UN.", 2.5, "", null, 1]], "ms": ["https://drive.google.com/thumbnail?id=1dDnqcfH5rPBtfrFP0tYHQFY1ZbqFXLjV&sz=w1000"], "md": ["https://drive.usercontent.google.com/download?id=1dDnqcfH5rPBtfrFP0tYHQFY1ZbqFXLjV&export=download&confirm=t"]}};
+var $=function(s,e){return (e||document).querySelector(s)},$$=function(s,e){return Array.prototype.slice.call((e||document).querySelectorAll(s))};
+function pf(v){return 'R$ '+Number(v).toLocaleString('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2})}
+function pgf(v){if(v>=1)return v.toFixed(2).replace('.',',');var s=v.toFixed(4);while(s.endsWith('0')&&s.split('.')[1].length>2)s=s.slice(0,-1);return s.replace('.',',')}
+var toastT;function toast(m){var t=$('#toast');t.textContent=m;t.classList.add('on');clearTimeout(toastT);toastT=setTimeout(function(){t.classList.remove('on')},1800)}
+
+var state={tab:'all',base:'all',q:''};
+var cart=[];
+try{cart=JSON.parse(localStorage.getItem('tl_cart_v1')||'[]')}catch(e){cart=[]}
+function save(){try{localStorage.setItem('tl_cart_v1',JSON.stringify(cart))}catch(e){}}
+
+function apply(){
+ var t=state.tab;
+ $('#vshop').classList.toggle('hide',t==='tabs');
+ $('#vtabs').classList.toggle('viewoff',t!=='tabs');
+ $$('.sec').forEach(function(s){
+  if(t==='tabs'){s.style.display='none';return}
+  if(state.tab!=='all'&&state.tab!==s.dataset.sec){s.style.display='none';return}
+  s.style.display='';
+  var any=false;
+  $$('.card',s).forEach(function(c){
+   var ok=(state.base==='all'||c.dataset.b===state.base)&&(!state.q||c.dataset.n.indexOf(state.q)>-1);
+   c.style.display=ok?'':'none';if(ok)any=true});
+  if(!any)s.style.display='none';
+  var cn=$('.cnt',s);if(cn)cn.textContent=s.style.display==='none'?0:$$('.card',s).filter(function(c){return c.style.display!=='none'}).length;
+ });
+ $$('.tb').forEach(function(b){b.classList.toggle('on',b.dataset.t===state.tab)});
+ $$('.bb').forEach(function(b){b.classList.toggle('on',b.dataset.b===state.base)});
+}
+$('#tabs').addEventListener('click',function(e){var b=e.target.closest('.tb');if(!b)return;state.tab=b.dataset.t;apply();window.scrollTo({top:0})});
+$('#bsel').addEventListener('click',function(e){var b=e.target.closest('.bb');if(!b)return;state.base=b.dataset.b;apply()});
+$('#q').addEventListener('input',function(e){state.q=e.target.value.trim().toLowerCase();apply()});
+
+function curTier(card){return parseInt(card.querySelector('.tier.sel').dataset.i,10)}
+function qtyOf(card){return Math.min(99,Math.max(1,parseInt($('.qv',card).value,10)||1))}
+document.addEventListener('click',function(e){
+ if(e.target.closest('#lbx')){lbClose();return}
+ if(e.target.closest('#lbpv')){lbStep(-1);return}
+ if(e.target.closest('#lbpx')){lbStep(1);return}
+ if(e.target.closest('#lbdl')){lbDl();return}
+ if(e.target.id==='lbi'){lbStep(1);return}
+ var med=e.target.closest('.media');
+ if(med&&med.closest('.card')){var cm=med.closest('.card');var pdm=PD[cm.dataset.k];if((pdm.ms||[]).length){lbOpen(cm.dataset.k,curGal(cm));return}}
+ var card=e.target.closest('.card');if(!card)return;
+ var tr=e.target.closest('.tier');
+ if(tr){$$('.tier',card).forEach(function(x){x.classList.remove('sel')});tr.classList.add('sel');
+  var spT=PD[card.dataset.k].t[+tr.dataset.i],inT=$('.qv',card),mnT=spT[4]||1;
+  if(!inT.value||parseInt(inT.value,10)<mnT)inT.value=mnT;
+  return}
+ var b=e.target.closest('button');if(!b)return;
+ if(b.classList.contains('ctb')){copyText(ptxt(card.dataset.k),b);return}
+ if(b.classList.contains('qm')||b.classList.contains('qp')){
+  var inp=$('.qv',card),spS=PD[card.dataset.k].t[curTier(card)],uS=spS[2]||'',mnS=spS[4]||1,mxS=uS==='G'?9999:99,stS=uS==='G'?10:1;
+  inp.value=Math.min(mxS,Math.max(mnS,(parseInt(inp.value,10)||mnS)+(b.classList.contains('qp')?stS:-stS)));return}
+ if(b.classList.contains('ba')){addCart(card);return}
+ if(b.classList.contains('bp')){quickPedir(card);return}
+});
+function addCart(card){
+ var k=card.dataset.k,i=curTier(card),spA=PD[k].t[i],q=Math.min(9999,Math.max(qtyOf(card),spA[4]||1)),hit=null;
+ cart.forEach(function(l){if(l.k===k&&l.i===i)hit=l});
+ if(hit)hit.q=Math.min(99,hit.q+q);else cart.push({k:k,i:i,q:q});
+ save();renderCart();toast('✓ ADICIONADO AO CARRINHO');
+}
+function quickPedir(card){
+ var pd=PD[card.dataset.k],sp=pd.t[curTier(card)],q=Math.min(9999,Math.max(qtyOf(card),sp[4]||1));
+ var msg='🛒 PEDIDO RÁPIDO — TOLEDO IMPORTS\nPRODUTO: '+pd.n+' (BASE '+pd.b+')\nITEM: '+sp[0]+' '+qsf(q,sp[2])+' — '+pf(sp[1]*q)+(sp[3]!=null&&sp[2]!=='G'?' (R$ '+pgf(sp[3])+'/g)':'')+'\nNOME:\nENDEREÇO: ';
+ window.open('https://wa.me/'+NUM+'?text='+encodeURIComponent(msg),'_blank');
+}
+
+function renderCart(){
+ var n=cart.reduce(function(a,l){return a+l.q},0);
+ var bn=$('#cartn');bn.textContent=n;bn.classList.toggle('off',!n);
+ $('#dcnt').textContent='('+n+')';
+ var empty=$('#dempty'),lines=$('#dlines'),tot=$('#dtot');
+ var has=!!cart.length;
+ empty.hidden=has;lines.hidden=!has;tot.hidden=!has;
+ $('#dform').style.display=has?'':'none';
+ $('.dacts').style.display=has?'':'none';
+ if(!has)return;
+ lines.innerHTML=cart.map(function(l,x){
+  var pd=PD[l.k],sp=pd.t[l.i];
+  return '<div class="dl" data-x="'+x+'"><div class="dli"><div class="dln">'+pd.n+'</div><div class="dls">'+sp[0]+' '+qsf(l.q,sp[2])+' · '+pf(sp[1])+(sp[2]?' /'+sp[2]:'')+(sp[3]!=null&&sp[2]!=='G'?' · R$ '+pgf(sp[3])+'/g':'')+' · BASE '+pd.b+'</div></div>'+
+  '<div class="qty sm"><button type="button" class="qm" data-a="-">−</button><input class="qv" value="'+l.q+'" readonly><button type="button" class="qp" data-a="+">+</button></div>'+
+  '<div class="dlt">'+pf(sp[1]*l.q)+'</div><button type="button" class="dlx" data-a="x">✕</button></div>';
+ }).join('');
+ var groups={},totG=0;
+ cart.forEach(function(l){var pd=PD[l.k],sp=pd.t[l.i];groups[pd.b]=(groups[pd.b]||0)+sp[1]*l.q;totG+=sp[1]*l.q});
+ var rows=Object.keys(groups).map(function(b){return b+' — '+pf(groups[b])}).join('<br>');
+ tot.innerHTML=(Object.keys(groups).length>1?('SUBTOTAL POR BASE<br>'+rows+'<br>'):'')+ 'TOTAL GERAL: <b>'+pf(totG)+'</b>';
+}
+$('#dlines').addEventListener('click',function(e){
+ var b=e.target.closest('button');if(!b)return;
+ var x=parseInt(b.closest('.dl').dataset.x,10),l=cart[x];if(!l)return;
+ if(b.dataset.a==='x')cart.splice(x,1);
+ else if(b.dataset.a==='+')l.q=Math.min(99,l.q+1);
+ else if(l.q<=1)cart.splice(x,1);else l.q--;
+ save();renderCart();
+});
+
+function openD(){$('#drawer').classList.add('on');$('#scrim').classList.add('on')}
+function closeD(){$('#drawer').classList.remove('on');$('#scrim').classList.remove('on')}
+$('#cartb').addEventListener('click',function(){renderCart();openD()});
+$('#dclos').addEventListener('click',closeD);
+$('#scrim').addEventListener('click',closeD);
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeD()});
+
+var f=$('#dform');
+f.addEventListener('input',function(e){
+ var v=e.target.value,n=e.target.name;
+ if(n==='cpf')v=v.replace(/\D/g,'').slice(0,11).replace(/(\d{3})(\d)/,'$1.$2').replace(/(\d{3})(\d)/,'$1.$2').replace(/(\d{3})(\d{1,2})$/,'$1-$2');
+ if(n==='cep')v=v.replace(/\D/g,'').slice(0,8).replace(/(\d{5})(\d)/,'$1-$2');
+ if(n==='uf')v=v.replace(/[^a-zA-Z]/g,'').toUpperCase().slice(0,2);
+ e.target.value=v;
+});
+function vals(){var o={},i;for(i=0;i<f.elements.length;i++){var el=f.elements[i];if(el.name)o[el.name]=(el.value||'').trim()}return o}
+function buildMsg(v){
+ if(!cart.length)return null;
+ var groups={},totG=0;
+ cart.forEach(function(l){var pd=PD[l.k],sp=pd.t[l.i];(groups[pd.b]=groups[pd.b]||[]).push('• '+pd.n+' · '+sp[0]+' '+qsf(l.q,sp[2])+' — '+pf(sp[1]*l.q)+(sp[3]!=null&&sp[2]!=='G'?' (R$ '+pgf(sp[3])+'/g)':''));totG+=sp[1]*l.q});
+ var m='🧾 NOVO PEDIDO — TOLEDO IMPORTS\n\nCLIENTE: '+(v.nome||'-');
+ if(v.cpf)m+='\nCPF: '+v.cpf;
+ m+='\nENDEREÇO: '+(v.end||'-')+(v.bairro?', '+v.bairro:'');
+ var cid=[v.cid,v.uf].filter(Boolean).join('/');if(cid)m+='\nCIDADE: '+cid+(v.cep?' · CEP '+v.cep:'');
+ if(v.obs)m+='\nOBS: '+v.obs;
+ Object.keys(groups).forEach(function(b){m+='\n\n━━ BASE '+b+' ━━\n'+groups[b].join('\n')});
+ m+='\n\nTOTAL GERAL: '+pf(totG);
+ return m;
+}
+function collect(){
+ var v=vals();
+ if(!v.nome||!v.end){
+  f.classList.add('err');
+  $$('#dform input').forEach(function(el){el.classList.remove('shake')});
+  if(!v.nome)f.elements['nome'].classList.add('shake');
+  if(!v.end)f.elements['end'].classList.add('shake');
+  setTimeout(function(){f.classList.remove('err')},500);
+  toast('PREENCHA NOME E ENDEREÇO');return null}
+ return v;
+}
+$('#sendwa').addEventListener('click',function(){
+ var v=collect();if(!v)return;
+ var m=buildMsg(v);if(!m){toast('ADICIONE PRODUTOS AO CARRINHO');return}
+ window.open('https://wa.me/'+NUM+'?text='+encodeURIComponent(m),'_blank');
+});
+$('#sendtx').addEventListener('click',function(){
+ var v=collect();if(!v)return;
+ var m=buildMsg(v);if(!m)return;
+ var blob=new Blob([m],{type:'text/plain'});
+ var a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='pedido-toledo.txt';
+ document.body.appendChild(a);a.click();a.remove();
+ setTimeout(function(){URL.revokeObjectURL(a.href)},4000);
+ toast('✓ PEDIDO SALVO EM .TXT');
+});
+
+function copyText(t,btn){
+ function ok(){if(btn){var o=btn.textContent;btn.textContent='✓ COPIADO';setTimeout(function(){btn.textContent=o},1500)}}
+ function fb(){var ta=document.createElement('textarea');ta.value=t;ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);ta.select();try{document.execCommand('copy')}catch(e){}ta.remove();ok()}
+ if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(t).then(ok,fb);else fb();
+}
+document.addEventListener('click',function(e){
+ var b=e.target.closest('.cpy');if(b){copyText(b.closest('.tblbox').querySelector('pre').textContent,b);return}
+ if(e.target.id==='cpall'){copyText($$('.tblbox').map(function(x){return x.querySelector('pre').textContent}).join('\n\n'),e.target)}
+});
+
+function qsf(q,u){return u==='G'?('×'+q+'G'):u==='KG'?('×'+q+'KG'):u==='PLACA'?('×'+q+' '+(q>1?'PLACAS':'PLACA')):'×'+q}
+function ptxt(k){var p=PD[k];var L=[p.n+' (BASE '+p.b+')'];p.t.forEach(function(sp){var u=sp[2]||'';var line=sp[0].padEnd(12,' ')+pf(sp[1])+(u?(' /'+u):'');if(u==='G')line+='  (mín. '+pf(sp[1]*(sp[4]||1))+')';else if(sp[3]!=null)line+='  (R$ '+pgf(sp[3])+'/g)';L.push(line)});return L.join('\n')}
+var LB={k:'',i:0};
+function LBS(){return PD[LB.k]}
+function LBI(){var n=((LBS()&&LBS().ms)||[]).length;return Math.max(0,Math.min(LB.i,n-1))}
+function lbShow(){document.getElementById('lbi').src=LBS().ms[LBI()];$('#lbcap').textContent=LBS().n+' — '+(LBI()+1)+'/'+LBS().ms.length}
+function lbOpen(k,i){LB.k=k;LB.i=i||0;if(!(LBS().ms||[]).length)return;$('#lb').classList.add('open');lbShow();document.body.style.overflow='hidden'}
+function lbClose(){$('#lb').classList.remove('on');document.body.style.overflow=''}
+function lbStep(d){var n=(LBS().ms||[]).length;if(n<1)return;LB.i=LBI()+d;if(LB.i<0)LB.i=n-1;if(LB.i>=n)LB.i=0;lbShow()}
+function lbDl(){var s=LBS().md[LBI()],a=document.createElement('a');a.href=s;a.download=LB.k+'.jpg';document.body.appendChild(a);a.click();a.remove();toast('BAIXANDO…')}
+function curGal(c){var m=$('.media',c);return m?(+m.dataset.i||0):0}
+function galGo(c,d){var m=$('.media',c);if(!m)return;var els=$$('.media img',c);if(els.length<2)return;var i=curGal(c)+d;if(i<0)i=els.length-1;if(i>=els.length)i=0;m.dataset.i=i;els.forEach(function(x,j){x.classList.toggle('on',j===i)});$$('.gdots i',m).forEach(function(x,j){x.classList.toggle('on',j===i)});var g=$('.gcnt',m);if(g)g.textContent=(i+1)+'/'+els.length;if($('#lb').classList.contains('open')&&LB.k===c.dataset.k){LB.i=i;lbShow()}}
+var sx0=0,sy0=0,sc=null;
+document.addEventListener('touchstart',function(e){sx0=e.touches[0].clientX;sy0=e.touches[0].clientY;sc=$('#lb').classList.contains('open')?'lb':(e.target.closest?e.target.closest('.media'):null)},{passive:true});
+document.addEventListener('touchend',function(e){var dx=e.changedTouches[0].clientX-sx0,dy=e.changedTouches[0].clientY-sy0;if(Math.abs(dx)<45||Math.abs(dy)>70){sc=null;return}if(sc==='lb')lbStep(dx<0?1:-1);else if(sc)galGo(sc,dx<0?1:-1);sc=null},{passive:true});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')lbClose()});
+renderCart();apply();
+window.TL={add:function(k,i,q){var c=document.querySelector('.card[data-k="'+k+'"]');if(!c)return;$$('.tier',c).forEach(function(x){x.classList.toggle('sel',+x.dataset.i===+i)});$('.qv',c).value=q;addCart(c)},
+ open:openD,close:closeD,render:renderCart,cart:function(){return JSON.parse(JSON.stringify(cart))},
+ lb:lbOpen,galgo:function(k,d){var c=document.querySelector('.card[data-k="'+k+'"]');if(c)galGo(c,d)},ptxt:ptxt};
+})();
+
+</script></body></html>
